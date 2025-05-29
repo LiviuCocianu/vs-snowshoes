@@ -1,0 +1,92 @@
+{
+  "code": "snowshoes",
+  "class": "snowshoes.snowshoes",
+  "storageFlags": 128,
+  "attributes": {
+    "clothescategory": "foot",
+    "wearableAttachment": true,
+    "displaycaseable": true,
+    "warmth": 0.5,
+    "groundStorageTransform": {
+      "translation": {
+        "x": 0,
+        "y": 0.011,
+        "z": 0
+      }
+    },
+    "onDisplayTransform": {
+      "translation": {
+        "x": 0,
+        "y": 0.011,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 0.9
+    }
+  },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "clothing": [ "*" ]
+  },
+  "shape": {
+    "base": "snowshoes:item/snowshoes"
+  },
+  "texturesByType": {
+    "*": {
+      "seraph": { "base": "game:block/transparent" }
+    }
+  },
+  "guiTransform": {
+    "translation": {
+      "x": 30,
+      "y": -31,
+      "z": 0
+    },
+    "rotation": {
+      "x": -36,
+      "y": -142,
+      "z": -180
+    },
+    "scale": 2.3
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.4,
+      "y": 0.1,
+      "z": -0.88
+    },
+    "rotation": {
+      "x": -86,
+      "y": 168,
+      "z": 5
+    },
+    "scale": 1.3
+  },
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0.55,
+      "z": 0
+    },
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5299
+    },
+    "scale": 5
+  }
+}
