@@ -58,6 +58,7 @@
 <ItemGroup>
   <Folder Include="assets\snowshoes\shapes\item\" />
   <Folder Include="assets\snowshoes\textures\item\snowshoes\" />
+  <Folder Include="classes\" />
 </ItemGroup>
 
 </Project>

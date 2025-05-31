@@ -1,6 +1,6 @@
 {
   "code": "snowshoes",
-  "class": "snowshoes.snowshoes",
+  "class": "ItemWearable",
   "storageFlags": 128,
   "attributes": {
     "clothescategory": "foot",
