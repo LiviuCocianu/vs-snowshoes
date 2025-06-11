@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<Reference Include="SkiaSharp">
+	  <HintPath>$(VINTAGE_STORY)/Lib/SkiaSharp.dll</HintPath>
+	  <Private>False</Private>
+	</Reference>
     <Reference Include="VintagestoryAPI">
       <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
       <Private>false</Private>
@@ -56,9 +60,7 @@
 </ItemGroup>
 
 <ItemGroup>
-  <Folder Include="assets\snowshoes\shapes\item\" />
   <Folder Include="assets\snowshoes\textures\item\snowshoes\" />
-  <Folder Include="classes\" />
 </ItemGroup>
 
 </Project>

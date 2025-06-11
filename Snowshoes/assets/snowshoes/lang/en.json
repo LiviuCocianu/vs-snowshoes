@@ -1,3 +1,7 @@
 {
-  "item-snowshoes": "Snowshoes"
+  "item-snowshoes-plain": "Snowshoes",
+  "itemdesc-snowshoes-plain": "A very simple, yet effective way of besting the unforgiving winter.\n\nSeems like its laces will require some reconditioning once in a while, otherwise the shoes will become less effective\n",
+  "item-snowshoes-fur": "Knee-high fur snowshoes",
+  "itemdesc-snowshoes-fur": "Snowshoes improvised with knee-high fur boots.\n\nVery straight forward, and no more frozen feet! Can be reconditioned the same way as regular fur boots\n",
+  "block-snowlayer-1": "Snow layer"
 }

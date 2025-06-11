@@ -1,36 +1,27 @@
 {
   "code": "snowshoes",
   "class": "ItemWearable",
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "plain", "fur" ]
+    }
+  ],
   "storageFlags": 128,
   "attributes": {
     "clothescategory": "foot",
     "wearableAttachment": true,
     "displaycaseable": true,
-    "warmth": 0.5,
+    "warmthByType": {
+      "*-plain": 0.5,
+      "*-fur": 2
+    },
     "groundStorageTransform": {
       "translation": {
         "x": 0,
         "y": 0.011,
         "z": 0
       }
-    },
-    "onDisplayTransform": {
-      "translation": {
-        "x": 0,
-        "y": 0.011,
-        "z": 0
-      },
-      "rotation": {
-        "x": 0,
-        "y": -90,
-        "z": 0
-      },
-      "origin": {
-        "x": 0.5,
-        "y": 0,
-        "z": 0.5
-      },
-      "scale": 0.9
     }
   },
   "creativeinventory": {
@@ -40,36 +31,88 @@
   "shape": {
     "base": "snowshoes:item/snowshoes"
   },
+  "shapeByType": {
+    "snowshoes-plain": { "base": "snowshoes:item/snowshoes-plain" },
+    "snowshoes-fur": { "base": "snowshoes:item/snowshoes-fur" }
+  },
   "texturesByType": {
     "*": {
       "seraph": { "base": "game:block/transparent" }
     }
   },
-  "guiTransform": {
-    "translation": {
-      "x": 30,
-      "y": -31,
-      "z": 0
+  "guiTransformByType": {
+    "snowshoes-plain": {
+      "translation": {
+        "x": 1.7,
+        "y": -6,
+        "z": 0
+      },
+      "rotation": {
+        "x": -36,
+        "y": -142,
+        "z": -180
+      },
+      "origin": {
+        "x": 0.9,
+        "y": -0.3,
+        "z": 1
+      },
+      "scaleXyz": {
+        "x": -2,
+        "y": 2,
+        "z": 2
+      }
     },
-    "rotation": {
-      "x": -36,
-      "y": -142,
-      "z": -180
-    },
-    "scale": 2.3
+    "snowshoes-fur": {
+      "translation": {
+        "x": 1.7,
+        "y": 3.5,
+        "z": 0
+      },
+      "rotation": {
+        "x": -36,
+        "y": -142,
+        "z": -180
+      },
+      "origin": {
+        "x": 0.9,
+        "y": -0.3,
+        "z": 1
+      },
+      "scaleXyz": {
+        "x": -1.81,
+        "y": 1.81,
+        "z": 1.81
+      }
+    }
   },
-  "tpHandTransform": {
-    "translation": {
-      "x": -0.4,
-      "y": 0.1,
-      "z": -0.88
+  "tpHandTransformByType": {
+    "snowshoes-plain": {
+      "translation": {
+        "x": -0.6,
+        "y": -0.25,
+        "z": -0.93
+      },
+      "rotation": {
+        "x": -86,
+        "y": 168,
+        "z": 4
+      },
+      "scale": 1
     },
-    "rotation": {
-      "x": -86,
-      "y": 168,
-      "z": 5
-    },
-    "scale": 1.3
+    "snowshoes-fur": {
+      "translation": {
+        "x": -0.71,
+        "y": -0.66,
+        "z": -0.84
+      },
+      "rotation": {
+        "x": 48,
+        "y": 88,
+        "z": 53
+      },
+      "scale": 0.71
+    }
   },
   "groundTransform": {
     "translation": {

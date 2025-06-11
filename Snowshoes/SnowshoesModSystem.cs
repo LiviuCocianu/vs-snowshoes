@@ -1,33 +1,21 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Snowshoes.classes;
 using Snowshoes.utils;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Vintagestory;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
-using Vintagestory.API.Config;
-using Vintagestory.API.Datastructures;
+using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.API.Util;
-using Vintagestory.Client.NoObf;
-using Vintagestory.Common;
-using Vintagestory.GameContent;
 
 namespace Snowshoes
 {
     public class SnowshoesModSystem : ModSystem
     {
-        private static ICoreAPI api;
+        public static ICoreAPI api;
         public ICoreClientAPI capi;
         public ICoreServerAPI sapi;
         private ILogger logger;
-
-        private List<string> movementAnimations = new() { "walk", "walk-fp", "sprint", "sprint-fp" };
-        private List<string> animations = new() { "idle1", "idle1-fp" };
-
-        private Dictionary<string, int> cachedAnimationIndexes = new();
 
         public static SnowshoesModSystem GetInstance() => api.ModLoader.GetModSystem<SnowshoesModSystem>();
 
@@ -37,79 +25,123 @@ namespace Snowshoes
 
         public override void Start(ICoreAPI api)
         {
-            //api.RegisterItemClass(Mod.Info.ModID + ".snowshoes", typeof(SnowshoesItem));
             logger = Mod.Logger;
             SnowshoesModSystem.api = api;
 
-            api.Event.OnEntityLoaded += (en) => {
-                if(en.GetType() == typeof(IPlayer)) {
-                    en.AnimManager.StopAnimation("walk");
-
-                    AnimationMetaData meta = en.AnimManager.Animator.Animations.ToList().Find(ran => ran.Animation.Code == "walk-snowshoes").meta.Clone();
-                    meta.Animation = "walk";
-                    meta.Code = "walk";
-
-                    en.AnimManager.StartAnimation(meta);
-
-                    // Handle idle and idle-like animations
-                    //en.AnimManager.OnStartAnimation += (ref AnimationMetaData meta, ref EnumHandling handling) => {
-                    //    logger.Notification("started 3: " + meta.Code);
-                    //    return true;
-                    //};
-                }
-            };
+            api.RegisterBlockClass(Mod.Info.ModID + ".snowlayer", typeof(BlockSnowshoesSnowLayer));
         }
 
         public override void StartServerSide(ICoreServerAPI api)
         {
             sapi = api;
-
-            //api.Event.PlayerJoin += (IServerPlayer byPlayer) => {
-            //    // Handle all movement animations
-            //    byPlayer.InWorldAction += (EnumEntityAction action, bool on, ref EnumHandling handled) => {
-            //        if (!on) return;
-
-            //        if (action == EnumEntityAction.Forward
-            //            || action == EnumEntityAction.Backward
-            //            || action == EnumEntityAction.Left
-            //            || action == EnumEntityAction.Right
-            //        ) {
-            //            if (byPlayer.Entity.AnimManager.IsAnimationActive("walk")) logger.Notification("works");
-            //            if (byPlayer.Entity.AnimManager.IsAnimationActive("walk-snowshoes")) logger.Notification("works ss");
-
-            //            // Go through all movement animations and replace them with mine
-            //            foreach (string anim in movementAnimations) {
-            //                // No reason to play my animation if it's already playing..
-            //                if (byPlayer.Entity.AnimManager.GetAnimationState(anim + "-snowshoes") != null) continue;
-
-            //                if (byPlayer.Entity.AnimManager.IsAnimationActive(anim)) {
-            //                    InventoryCharacter inv = (InventoryCharacter)byPlayer.InventoryManager.GetInventory(byPlayer.InventoryManager.GetInventoryName("character"));
-            //                    ItemSlot slotBoots = inv.ElementAt(4);
-
-            //                    // If snowshoes are equipped
-            //                    if (!slotBoots.Empty && slotBoots.Itemstack.Item.CodeEndWithoutParts(1).Equals("snowshoes")) {
-            //                        // Load the animations from my custom seraph shape file
-            //                        byPlayer.Entity.AnimManager.StopAnimation(anim);
-            //                        byPlayer.Entity.AnimManager.StartAnimation(anim + "-snowshoes");
-            //                    }
-            //                }
-            //            }
-            //        }
-            //    };
-            //};
         }
 
         public override void StartClientSide(ICoreClientAPI api)
         {
             capi = api;
 
-            api.Event.PlayerJoin += (IClientPlayer byPlayer) => {
-                // Handle idle and idle-like animations
-                byPlayer.WorldData.EntityPlayer.AnimManager.OnStartAnimation += (ref AnimationMetaData meta, ref EnumHandling handling) => {
-                    logger.Notification("started: " + meta.Code);
-                    return true;
-                };
+            int radius = 1;
+            bool handleSnowWalking(IPlayer pl, ref AnimationMetaData meta, ref EnumHandling handling)
+            {
+                long listener = 0;
+
+                if (!meta.Code.Contains("walk")
+                    && !meta.Code.Contains("sprint")
+                    && !meta.Code.Contains("sneak")) return false;
+
+                // Frequent checks are needed so players don't sink in the snow
+                listener = api.Event.RegisterGameTickListener(fl =>
+                {
+                    EntityControls ec = pl.Entity.Controls;
+
+                    // Stop listener if player stops moving
+                    if (!ec.Forward && !ec.Backward && !ec.Left && !ec.Right)
+                    {
+                        api.Event.UnregisterGameTickListener(listener);
+                        return;
+                    }
+
+                    IBlockAccessor bacc = api.World.BlockAccessor;
+
+                    // Check snow in a radius
+                    for (int i = -radius; i <= radius; i++)
+                    {
+                        for (int j = -radius; j <= radius; j++)
+                        {
+                            BlockPos blPos = pl.Entity.Pos.AsBlockPos.AddCopy(i, 0, j);
+                            Block bl = bacc.GetBlock(blPos);
+
+                            if (!AssetUtils.IsSnowloggable(bl)) continue;
+
+                            float condition = InventoryUtils.GetShoesCondition(pl);
+
+                            // If condition drops below 25%, negate snowshoe's effect
+                            if (condition == -1) continue;
+                            if (condition < 0.25) continue;
+
+                            int currentLayer = AssetUtils.GetSnowloggedLayer(bl);
+
+                            // Theoretically, this should never trigger, since the block is confirmed to be snow
+                            if (currentLayer == -1) continue;
+
+                            // If player is inside snow layer, place them on top
+                            if (i == 0 && i == j) PlacePlayerOnTop(pl, bl);
+
+                            // Set snowlogged block to my custom snow
+                            bacc.SetBlock(AssetUtils.GetSnowloggedBlockId(bl, currentLayer, "snowshoes"), blPos);
+
+                            // Set my custom snow back to normal after some time
+                            RevertSnowloggedBlock(blPos, currentLayer);
+                        }
+                    }
+                }, 50);
+
+                return false;
+            }
+
+            api.Event.PlayerJoin += (pl) =>
+            {
+                bool handleSnowWalkingNoPl(ref AnimationMetaData meta, ref EnumHandling handling) => handleSnowWalking(pl, ref meta, ref handling);
+                pl.Entity.OtherAnimManager.OnStartAnimation += handleSnowWalkingNoPl;
             };
+        }
+
+
+        private void PlacePlayerOnTop(IPlayer pl, Block bl)
+        {
+            if (bl == null) return;
+            if (bl.CollisionBoxes == null) return;
+
+            double actualY = pl.Entity.Pos.Y;
+            int normalizedY = (int)actualY;
+            float layerHeight = bl.CollisionBoxes[0].Height;
+
+            if (actualY < normalizedY + layerHeight)
+            {
+                double diff = (normalizedY + layerHeight) - actualY;
+                pl.Entity.Pos.Add(0, diff, 0);
+            }
+        }
+
+        private long RevertSnowloggedBlock(BlockPos blPos, int currentLayer)
+        {
+            return api.World.RegisterCallback((fl) =>
+            {
+                bool plFilter(IPlayer pl) => InventoryUtils.AreSnowshoesEquipped(pl).Item1;
+                Block bl = api.World.BlockAccessor.GetBlock(blPos);
+
+                if (!AssetUtils.IsSnowloggable(bl)) return;
+
+                // If a player with snowshoes is still stood on this snow layer, keep checking and don't revert it yet
+                if (api.World.GetPlayersAround(blPos.ToVec3d(), 1, 1, plFilter).Length > 0)
+                {
+                    RevertSnowloggedBlock(blPos, currentLayer);
+                    return;
+                }
+
+                // Revert snow layer to its vanilla version
+                api.World.BlockAccessor.SetBlock(AssetUtils.GetSnowloggedBlockId(bl, currentLayer, "game"), blPos);
+            }, 500);
         }
     }
 }

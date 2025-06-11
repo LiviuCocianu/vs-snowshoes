@@ -8,6 +8,7 @@
     "description": "Adds a pair of shoes that allow you to walk faster on snow",
     "version": "1.0.0",
     "dependencies": {
-        "game": ""
+      "game": "",
+      "survival": ""
     }
 }

@@ -11,7 +11,9 @@ using Vintagestory.API.Server;
 
 namespace Snowshoes.utils {
     internal class AnimationUtils {
+#nullable enable
         public static Animation? GetAnimation(ICoreServerAPI sapi, Dictionary<string, int> indexCache, string animCode) {
+#nullable disable
             sapi.Logger.Notification(GetAllPlayerAnimations(sapi).Last().Code);
             return GetAllPlayerAnimations(sapi)[indexCache[animCode]];
         }
