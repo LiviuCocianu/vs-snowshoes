@@ -1,12 +1,10 @@
 ﻿using Snowshoes.classes;
 using Snowshoes.utils;
-using System;
-using System.Collections.Generic;
+using System.Linq;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
-using Vintagestory.API.Util;
 
 namespace Snowshoes
 {
@@ -99,10 +97,20 @@ namespace Snowshoes
                 return false;
             }
 
-            api.Event.PlayerJoin += (pl) =>
+            capi.Event.IsPlayerReady += (ref EnumHandling handling) =>
             {
+                IClientPlayer pl = capi.World.Player;
+
+                if (pl == null)
+                {
+                    logger.Warning("Couldn't register snow walking logic for " + pl.PlayerName + ".. Snowshoes won't work for this player!");
+                    return false;
+                }
+
                 bool handleSnowWalkingNoPl(ref AnimationMetaData meta, ref EnumHandling handling) => handleSnowWalking(pl, ref meta, ref handling);
                 pl.Entity.OtherAnimManager.OnStartAnimation += handleSnowWalkingNoPl;
+
+                return true;
             };
         }
 
@@ -131,6 +139,7 @@ namespace Snowshoes
                 Block bl = api.World.BlockAccessor.GetBlock(blPos);
 
                 if (!AssetUtils.IsSnowloggable(bl)) return;
+                if (AssetUtils.GetSnowloggedLayer(bl) == -1) return; // Check if there is still snow at this block
 
                 // If a player with snowshoes is still stood on this snow layer, keep checking and don't revert it yet
                 if (api.World.GetPlayersAround(blPos.ToVec3d(), 1, 1, plFilter).Length > 0)
