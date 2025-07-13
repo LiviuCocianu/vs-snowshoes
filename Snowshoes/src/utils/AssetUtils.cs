@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Common;
 
-namespace Snowshoes.utils
+namespace Snowshoes.src.utils
 {
     internal class AssetUtils
     {
@@ -18,7 +18,7 @@ namespace Snowshoes.utils
                 : "";
 
             string variantValue = firstCode == "snowlayer" ? layer.ToString()
-                : firstCode == "tallgrass" ? ("snow" + (layer == 1 ? "" : layer))
+                : firstCode == "tallgrass" ? "snow" + (layer == 1 ? "" : layer)
                 : "";
 
             if (variantType == "") return -1;
@@ -42,8 +42,8 @@ namespace Snowshoes.utils
 
             if (firstCode == "tallgrass") lastChar = bl.FirstCodePart(2)[^1];
 
-            return firstCode == "snowlayer" ? Int32.Parse(bl.FirstCodePart(1))
-                : firstCode == "tallgrass" ? Int32.Parse(lastChar == 'w' ? "1" : lastChar == 'e' ? "-1" : lastChar + "")
+            return firstCode == "snowlayer" ? int.Parse(bl.FirstCodePart(1))
+                : firstCode == "tallgrass" ? int.Parse(lastChar == 'w' ? "1" : lastChar == 'e' ? "-1" : lastChar + "")
                 : -1;
         }
     }

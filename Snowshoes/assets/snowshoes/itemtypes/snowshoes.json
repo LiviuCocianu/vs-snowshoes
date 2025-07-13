@@ -1,7 +1,11 @@
 {
   "code": "snowshoes",
-  "class": "ItemWearable",
+  "class": "snowshoes.snowshoes",
   "variantgroups": [
+    {
+      "code": "material",
+      "states": [ "wooden", "metal" ]
+    },
     {
       "code": "type",
       "states": [ "plain", "fur" ]
@@ -13,8 +17,8 @@
     "wearableAttachment": true,
     "displaycaseable": true,
     "warmthByType": {
-      "*-plain": 0.5,
-      "*-fur": 2
+      "snowshoes-*-plain": 0,
+      "snowshoes-*-fur": 2
     },
     "groundStorageTransform": {
       "translation": {
@@ -32,16 +36,19 @@
     "base": "snowshoes:item/snowshoes"
   },
   "shapeByType": {
-    "snowshoes-plain": { "base": "snowshoes:item/snowshoes-plain" },
-    "snowshoes-fur": { "base": "snowshoes:item/snowshoes-fur" }
+    "snowshoes-wooden-plain": { "base": "snowshoes:item/wooden/snowshoes-plain" },
+    "snowshoes-wooden-fur": { "base": "snowshoes:item/wooden/snowshoes-fur" }
   },
   "texturesByType": {
     "*": {
       "seraph": { "base": "game:block/transparent" }
     }
   },
+  "durabilitybytype": {
+    "snowshoes-wooden-*": 400
+  },
   "guiTransformByType": {
-    "snowshoes-plain": {
+    "snowshoes-*-plain": {
       "translation": {
         "x": 1.7,
         "y": -6,
@@ -63,7 +70,7 @@
         "z": 2
       }
     },
-    "snowshoes-fur": {
+    "snowshoes-*-fur": {
       "translation": {
         "x": 1.7,
         "y": 3.5,
@@ -87,7 +94,7 @@
     }
   },
   "tpHandTransformByType": {
-    "snowshoes-plain": {
+    "snowshoes-*-plain": {
       "translation": {
         "x": -0.6,
         "y": -0.25,
@@ -100,7 +107,7 @@
       },
       "scale": 1
     },
-    "snowshoes-fur": {
+    "snowshoes-*-fur": {
       "translation": {
         "x": -0.71,
         "y": -0.66,

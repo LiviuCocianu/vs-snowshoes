@@ -2,9 +2,9 @@
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
-namespace Snowshoes.classes
+namespace Snowshoes.src.blocktypes
 {
-    public class MyBlockLayered : BlockLayered
+    public class SnowshoesBlockLayered : BlockLayered
     {
         public new Block GetNextLayer(IWorldAccessor world)
         {
@@ -29,9 +29,9 @@ namespace Snowshoes.classes
 
             Block block = world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(blockSel.Face.Opposite));
 
-            if (block is MyBlockLayered)
+            if (block is SnowshoesBlockLayered)
             {
-                Block nextBlock = ((MyBlockLayered)block).GetNextLayer(world);
+                Block nextBlock = ((SnowshoesBlockLayered)block).GetNextLayer(world);
                 world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position.AddCopy(blockSel.Face.Opposite));
 
                 return true;

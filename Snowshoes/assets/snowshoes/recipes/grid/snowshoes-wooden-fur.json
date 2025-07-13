@@ -9,11 +9,11 @@
     },
     "S": {
       "type": "item",
-      "code": "snowshoes-plain"
+      "code": "snowshoes-wooden-plain"
     }
   },
   "output": {
     "type": "item",
-    "code": "snowshoes-fur"
+    "code": "snowshoes-wooden-fur"
   }
 }

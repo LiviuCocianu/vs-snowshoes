@@ -3,7 +3,7 @@
   "ingredients": {
     "F": {
       "type": "item",
-      "code": "snowshoes-fur"
+      "code": "snowshoes-wooden-fur"
     },
     "S": {
       "type": "item",
@@ -17,6 +17,6 @@
   "shapeless": true,
   "output": {
     "type": "item",
-    "code": "snowshoes-fur"
+    "code": "snowshoes-wooden-fur"
   }
 }

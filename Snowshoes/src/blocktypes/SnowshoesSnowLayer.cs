@@ -3,9 +3,9 @@ using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
 
-namespace Snowshoes.classes
+namespace Snowshoes.src.blocktypes
 {
-    public class BlockSnowshoesSnowLayer : MyBlockLayered
+    public class SnowshoesSnowLayer : SnowshoesBlockLayered
     {
         int height;
         bool canMelt;

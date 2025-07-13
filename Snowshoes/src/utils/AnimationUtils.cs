@@ -9,7 +9,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Server;
 
-namespace Snowshoes.utils {
+namespace Snowshoes.src.utils {
     internal class AnimationUtils {
 #nullable enable
         public static Animation? GetAnimation(ICoreServerAPI sapi, Dictionary<string, int> indexCache, string animCode) {
