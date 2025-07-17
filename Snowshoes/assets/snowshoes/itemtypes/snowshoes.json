@@ -3,11 +3,24 @@
   "class": "snowshoes.snowshoes",
   "variantgroups": [
     {
-      "code": "material",
+      "code": "grade",
       "states": [ "wooden", "metal" ]
     },
     {
-      "code": "type",
+      "code": "wooden",
+      "combine": "SelectiveMultiply",
+      "onVariant": "grade",
+      "states": [ "aged" ],
+      "loadFromProperties": [ "block/wood" ]
+    },
+    {
+      "code": "metal",
+      "combine": "SelectiveMultiply",
+      "onVariant": "grade",
+      "loadFromProperties": [ "snowshoes:block/snowshoesmetal" ]
+    },
+    {
+      "code": "style",
       "states": [ "plain", "fur" ]
     }
   ],
@@ -36,8 +49,8 @@
     "base": "snowshoes:item/snowshoes"
   },
   "shapeByType": {
-    "snowshoes-wooden-plain": { "base": "snowshoes:item/wooden/snowshoes-plain" },
-    "snowshoes-wooden-fur": { "base": "snowshoes:item/wooden/snowshoes-fur" }
+    "snowshoes-wooden-*": { "base": "snowshoes:item/snowshoes/wooden/{wooden}/{style}" },
+    "snowshoes-metal-*": { "base": "snowshoes:item/snowshoes/metal/{metal}/{style}" }
   },
   "texturesByType": {
     "*": {

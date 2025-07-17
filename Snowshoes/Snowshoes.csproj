@@ -60,7 +60,6 @@
 </ItemGroup>
 
 <ItemGroup>
-  <Folder Include="assets\snowshoes\shapes\item\metal\" />
   <Folder Include="assets\snowshoes\textures\item\snowshoes\" />
 </ItemGroup>
 

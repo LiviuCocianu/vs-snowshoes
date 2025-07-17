@@ -1,6 +1,6 @@
 {
 	"editor": {
-		"backDropShape": "snowshoes:shapes/backdrop/seraph-faceless",
+		"backDropShape": "entity/humanoid/seraph",
 		"collapsedPaths": "Root/SnowshoeL/LatticedBase2,Root/SnowshoeR/LatticedBase2,Root/SnowshoeR/FootCover2,Root/SnowshoeR/FootCover,Root/SnowshoeR/WoodFrame2,Root/SnowshoeL/WoodFrame2,Root/SnowshoeR/WoodFrame,Root/shoe R,Root/shoe L,Root/SnowshoeR/LatticedBase",
 		"allAngles": true,
 		"entityTextureMode": true
