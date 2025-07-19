@@ -1,44 +1,41 @@
 [
   {
     "ingredientPattern": "FS",
+    "width": 2,
+    "height": 1,
     "ingredients": {
       "F": {
         "type": "item",
-        "code": "snowshoes-wooden-*-fur-untreated",
-        "name": "wood"
+        "code": "game:clothes-foot-knee-high-fur-boots"
       },
       "S": {
         "type": "item",
-        "code": "game:sewingkit"
+        "code": "snowshoes-wooden-*-plain-untreated",
+        "name": "wood"
       }
     },
-    "width": 2,
-    "height": 1,
-    "requiresTrait": "clothier",
-    "copyAttributesFrom": "F",
     "shapeless": true,
     "output": {
       "type": "item",
-      "code": "snowshoes-wooden-{wood}-fur-untreated"
+      "code": "snowshoes-wooden-{wood}-fur-untreated",
+      "skipVariants": [ "snowshoes-wooden-crude-fur-untreated" ]
     }
   },
   {
     "ingredientPattern": "FS",
+    "width": 2,
+    "height": 1,
     "ingredients": {
       "F": {
         "type": "item",
-        "code": "snowshoes-wooden-*-fur-treated",
-        "name": "wood"
+        "code": "game:clothes-foot-knee-high-fur-boots"
       },
       "S": {
         "type": "item",
-        "code": "game:sewingkit"
+        "code": "snowshoes-wooden-*-plain-treated",
+        "name": "wood"
       }
     },
-    "width": 2,
-    "height": 1,
-    "requiresTrait": "clothier",
-    "copyAttributesFrom": "F",
     "shapeless": true,
     "output": {
       "type": "item",

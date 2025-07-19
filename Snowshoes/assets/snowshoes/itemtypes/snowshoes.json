@@ -8,6 +8,8 @@
     },
     {
       "code": "wooden",
+      "combine": "SelectiveMultiply",
+      "onVariant": "grade",
       "states": [ "crude", "bamboo", "birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart" ]
     },
     {
@@ -20,22 +22,30 @@
     }
   ],
   "skipVariants": [
-    "snowshoes-wooden-crude-fur",
+    "snowshoes-wooden-crude-plain-waxed",
+    "snowshoes-wooden-crude-plain-treated",
+    "snowshoes-wooden-crude-fur-*",
     "snowshoes-*-fur-waxed"
   ],
   "storageFlags": 128,
   "attributesByType": {
-    "snowshoes-*-plain": {
+    "snowshoes-*-plain-*": {
       "clothescategory": "foot",
       "wearableAttachment": true,
+      "rackable": true,
       "warmth": 0,
 		  "groundStorageTransform": {
 			  "translation": { "x": 0, "y": 0.34, "z": 0.32 },
 			  "rotation": { "x": 0, "y": -75, "z": 75 },
 			  "origin": { "x": 0.5, "y": 0, "z": 0.5 }
+		  },
+		  "toolrackTransform": {
+			  "translation": { "x": 0, "y": -0.67, "z": 0 },
+			  "rotation": { "x": 0, "y": 180, "z": 180 },
+			  "scale": 1.2
 		  }
     },
-    "snowshoes-*-fur": {
+    "snowshoes-*-fur-*": {
       "clothescategory": "foot",
       "wearableAttachment": true,
       "warmth": 2,
@@ -55,6 +65,24 @@
     }
   },
   "texturesByType": {
+    "snowshoes-wooden-bamboo-plain-waxed": {
+      "frame": {
+        "base": "game:block/wood/planks/bamboosmooth",
+        "overlays": ["game:item/resource/hide/oiled"]
+      },
+      "seraph": {
+        "base": "game:block/transparent"
+      }
+    },
+    "snowshoes-wooden-*-plain-waxed": {
+      "frame": {
+        "base": "game:block/wood/planks/{wooden}1",
+        "overlays": ["game:item/resource/hide/oiled"]
+      },
+      "seraph": {
+        "base": "game:block/transparent"
+      }
+    },
     "*": {
       "seraph": {
         "base": "game:block/transparent"
@@ -63,10 +91,11 @@
   },
   "durabilitybytype": {
     "snowshoes-wooden-crude-plain": 150,
-    "snowshoes-wooden-*": 400
+    "snowshoes-wooden-*-treated": 450,
+    "snowshoes-wooden-*": 300
   },
   "behaviorsByType": {
-    "snowshoes-*-plain": [
+    "snowshoes-*-plain-*": [
       {
         "name": "GroundStorable",
         "properties": {
@@ -78,7 +107,7 @@
         }
       }
     ],
-    "snowshoes-*-fur": [
+    "snowshoes-*-fur-*": [
       {
         "name": "GroundStorable",
         "properties": {
@@ -92,13 +121,13 @@
     ]
   },
   "guiTransformByType": {
-    "snowshoes-*-plain": {
+    "snowshoes-*-plain-*": {
       "translation": { "x": 1.7, "y": -6, "z": 0 },
       "rotation": { "x": -36, "y": -142, "z": -180 },
       "origin": { "x": 0.9, "y": -0.3, "z": 1 },
       "scaleXyz": { "x": -2, "y": 2, "z": 2 }
     },
-    "snowshoes-*-fur": {
+    "snowshoes-*-fur-*": {
       "translation": { "x": 1.7, "y": 3.5, "z": 0 },
       "rotation": { "x": -36, "y": -142, "z": -180 },
       "origin": { "x": 0.9, "y": -0.3, "z": 1 },
@@ -106,12 +135,12 @@
     }
   },
   "tpHandTransformByType": {
-    "snowshoes-*-plain": {
+    "snowshoes-*-plain-*": {
       "translation": { "x": -0.6, "y": -0.25, "z": -0.93 },
       "rotation": { "x": -86, "y": 168, "z": 4 },
       "scale": 1
     },
-    "snowshoes-*-fur": {
+    "snowshoes-*-fur-*": {
       "translation": { "x": -0.71, "y": -0.66, "z": -0.84 },
       "rotation": { "x": 48, "y": 88, "z": 53 },
       "scale": 0.71
@@ -122,5 +151,14 @@
     "rotation": { "x": 0, "y": 0, "z": 0 },
     "origin": { "x": 0.5, "y": 0.5, "z": 0.5299 },
     "scale": 5
+  },
+  "transitionablePropsByType": {
+		"snowshoes-wooden-*-plain-waxed": [{
+			"type": "Dry",
+			"freshHours": { "avg": 0 },
+			"transitionHours": { "avg": 48 },
+			"transitionedStack": { "type": "item", "code": "snowshoes-wooden-{wooden}-plain-treated" },
+			"transitionRatio": 1
+		}]
   }
 }
