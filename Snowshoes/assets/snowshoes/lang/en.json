@@ -42,12 +42,24 @@
   "item-snowshoes-wooden-redwood-fur-*": "Knee-high fur snowshoes (Redwood)",
   "item-snowshoes-wooden-walnut-fur-*": "Knee-high fur snowshoes (Walnut)",
 
+  "item-snowshoes-metal-aluminum-plain-untreated": "Metal snowshoes (Aluminum)",
+  "item-snowshoes-metal-aluminum-fur-untreated": "Knee-high fur snowshoes (Aluminum)",
+  "item-snowshoes-metal-aluminumsturdy-plain-untreated": "Metal snowshoes (Aluminum)",
+  "item-snowshoes-metal-aluminumsturdy-fur-untreated": "Knee-high fur snowshoes (Aluminum)",
+
+  "item-shoeframe-aluminum": "Snowshoes frame pair (Aluminum)",
+
   "itemdesc-snowshoes-wooden-*-plain-untreated": "A very simple, yet effective way of besting the unforgiving winter.\n",
   "itemdesc-snowshoes-wooden-*-plain-treated": "A very simple, yet effective way of besting the unforgiving winter.\n\n<font color=\"#99c9f9\">This pair seems to be wax-treated</font>\n",
   "itemdesc-snowshoes-wooden-*-plain-waxed": "A very simple, yet effective way of besting the unforgiving winter.\n\nThis pair should be placed on a tool rack to dry..\n",
   "itemdesc-snowshoes-wooden-*-fur-untreated": "Snowshoes improvised with knee-high fur boots.\n\nVery straight forward, and no more frozen feet!\n",
   "itemdesc-snowshoes-wooden-*-fur-treated": "Snowshoes improvised with knee-high fur boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">This pair seems to be wax-treated</font>\n",
-  
+
+  "itemdesc-snowshoes-metal-aluminum-plain-untreated": "Much lighter and much more durable than its wooden predecessor.\n",
+  "itemdesc-snowshoes-metal-aluminum-fur-untreated": "Snowshoes improvised with knee-high fur boots.\n\nVery straight forward, and no more frozen feet!\n",
+  "itemdesc-snowshoes-metal-aluminumsturdy-plain-untreated": "Much lighter and much more durable than its wooden predecessor.\n\n<font color=\"#99c9f9\">Extra durability from sturdy leather</font>\n",
+  "itemdesc-snowshoes-metal-aluminumsturdy-fur-untreated": "Snowshoes improvised with knee-high fur boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">Extra durability from sturdy leather</font>\n",
+
   "block-snowlayer-1": "Snow layer",
   "block-tallgrass-veryshort-*": "Grass (Very short)",
   "block-tallgrass-short-*": "Grass (Short)",

@@ -1,0 +1,24 @@
+[
+  {
+    "enabled": false,
+    "ingredientPattern": "FS",
+    "width": 2,
+    "height": 1,
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "game:clothes-foot-knee-high-fur-boots"
+      },
+      "S": {
+        "type": "item",
+        "code": "snowshoes-metal-*-plain-untreated",
+        "name": "metal"
+      }
+    },
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "snowshoes-metal-{metal}-fur-untreated"
+    }
+  }
+]

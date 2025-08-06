@@ -1,0 +1,53 @@
+[
+  {
+    "enabled": false,
+    "ingredientPattern": "FS",
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "snowshoes-metal-*-plain-untreated",
+        "name": "metal",
+        "skipVariants": []
+      },
+      "S": {
+        "type": "item",
+        "code": "game:leather-normal-plain"
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "shapeless": true,
+    "copyAttributesFrom": "F",
+    "averageDurability": false,
+    "name": "metal snowshoes repair",
+    "output": {
+      "type": "item",
+      "code": "snowshoes-metal-{metal}-plain-untreated"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "FS",
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "snowshoes-metal-*sturdy-plain-untreated",
+        "name": "metal"
+      },
+      "S": {
+        "type": "item",
+        "code": "game:leather-sturdy-plain"
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "shapeless": true,
+    "copyAttributesFrom": "F",
+    "averageDurability": false,
+    "name": "metal snowshoes sturdy repair",
+    "output": {
+      "type": "item",
+      "code": "snowshoes-metal-{metal}sturdy-plain-untreated"
+    }
+  }
+]

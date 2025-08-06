@@ -1,0 +1,46 @@
+[
+  {
+    "ingredientPattern": "FS",
+    "width": 2,
+    "height": 1,
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "game:clothes-foot-knee-high-fur-boots"
+      },
+      "S": {
+        "type": "item",
+        "code": "snowshoes-wooden-*-plain-untreated",
+        "name": "wood",
+        "skipVariants": [ "crude" ]
+      }
+    },
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "snowshoes-wooden-{wood}-fur-untreated"
+    }
+  },
+  {
+    "ingredientPattern": "FS",
+    "width": 2,
+    "height": 1,
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "game:clothes-foot-knee-high-fur-boots"
+      },
+      "S": {
+        "type": "item",
+        "code": "snowshoes-wooden-*-plain-treated",
+        "name": "wood",
+        "skipVariants": [ "crude" ]
+      }
+    },
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "snowshoes-wooden-{wood}-fur-treated"
+    }
+  }
+]

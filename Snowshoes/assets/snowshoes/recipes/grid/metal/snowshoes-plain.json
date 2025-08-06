@@ -1,0 +1,60 @@
+[
+  {
+    "enabled": false,
+    "ingredientPattern": "_L_,KF_,_L_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "K": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true,
+        "toolDurabilityCost": 2
+      },
+      "L": {
+        "type": "item",
+        "code": "game:leather-normal-plain",
+        "quantity": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "shoeframe-*",
+        "quantity": 1,
+        "name": "metal"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "snowshoes-metal-{metal}-plain-untreated"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "_L_,KF_,_L_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "K": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true,
+        "toolDurabilityCost": 2
+      },
+      "L": {
+        "type": "item",
+        "code": "game:leather-sturdy-plain",
+        "quantity": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "shoeframe-*",
+        "quantity": 1,
+        "name": "metal"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "snowshoes-metal-{metal}sturdy-plain-untreated"
+    }
+  }
+]

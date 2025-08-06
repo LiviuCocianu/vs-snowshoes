@@ -12,8 +12,8 @@
 		"frame": [16,16]
 	},
 	"textures": {
-		"lattices": "snowshoes:item/snowshoes/lattices-rope",
-		"shoe": "snowshoes:item/snowshoes/snowshoes-shoe",
+		"lattices": "snowshoes:item/snowshoes/lattices/rope",
+		"shoe": "snowshoes:item/snowshoes/shoe/plain",
 		"frame": "game:block/wood/debarked/oak",
 		"rope": "game:item/resource/rope"
 	},

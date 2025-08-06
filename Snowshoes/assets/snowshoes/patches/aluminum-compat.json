@@ -1,0 +1,189 @@
+[
+  {
+    "file": "itemtypes/shoeframe",
+    "path": "/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "recipes/smithing/shoeframe",
+    "path": "/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "recipes/smithing/shoeframe",
+    "path": "/ingredient/allowedVariants/-",
+    "op": "addmerge",
+    "value": "aluminum",
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "itemtypes/shoeframe",
+    "path": "/variantgroups/0/states/-",
+    "op": "addmerge",
+    "value": "aluminum",
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+
+  {
+    "file": "itemtypes/snowshoes",
+    "path": "/variantgroups/0/states/-",
+    "op": "addmerge",
+    "value": "metal",
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "itemtypes/snowshoes",
+    "path": "/variantgroups/-",
+    "op": "addmerge",
+    "value": {
+      "code": "metal",
+      "combine": "SelectiveMultiply",
+      "onVariant": "grade",
+      "states": [ "aluminum", "aluminumsturdy" ]
+    },
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "itemtypes/snowshoes",
+    "path": "/skipVariants/-",
+    "op": "addeach",
+    "value": [
+      "snowshoes-metal-aluminum-*-waxed",
+      "snowshoes-metal-aluminumsturdy-*-waxed",
+      "snowshoes-metal-aluminum-*-treated",
+      "snowshoes-metal-aluminumsturdy-*-treated"
+    ],
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "itemtypes/snowshoes",
+    "path": "/shapeByType",
+    "op": "addmerge",
+    "value": {
+      "@snowshoes-metal-(aluminum|aluminumsturdy)-.*": {
+        "base": "snowshoes:item/snowshoes/metal/aluminum/{style}"
+      }
+    },
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "itemtypes/snowshoes",
+    "frompath": "/texturesByType/*",
+    "path": "/temp",
+    "op": "move",
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "itemtypes/snowshoes",
+    "path": "/texturesByType",
+    "op": "addmerge",
+    "value": {
+      "snowshoes-metal-aluminum-*": {
+        "leather": { "base": "item/snowshoes/lattices/leather-plain" },
+        "shoe": { "base": "item/snowshoes/shoe/plain" },
+        "seraph": { "base": "game:block/transparent" }
+      },
+      "snowshoes-metal-aluminumsturdy-*": {
+        "leather": { "base": "item/snowshoes/lattices/leather-sturdy" },
+        "shoe": { "base": "item/snowshoes/shoe/sturdy" },
+        "seraph": { "base": "game:block/transparent" }
+      }
+    },
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "itemtypes/snowshoes",
+    "frompath": "/temp",
+    "path": "/texturesByType/*",
+    "op": "move",
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "itemtypes/snowshoes",
+    "path": "/durabilitybytype",
+    "op": "addmerge",
+    "value": {
+      "snowshoes-metal-aluminum-*": 600,
+      "snowshoes-metal-aluminumsturdy-*": 750
+    },
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+
+  {
+    "file": "recipes/grid/metal/snowshoes-plain",
+    "path": "/0/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "recipes/grid/metal/snowshoes-plain",
+    "path": "/1/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+
+  {
+    "file": "recipes/grid/metal/snowshoes-fur",
+    "path": "/0/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+
+  {
+    "file": "recipes/grid/metal/repair/snowshoes-plain",
+    "path": "/0/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "recipes/grid/metal/repair/snowshoes-plain",
+    "path": "/0/ingredients/F/skipVariants/-",
+    "op": "addmerge",
+    "value": "aluminumsturdy",
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "recipes/grid/metal/repair/snowshoes-plain",
+    "path": "/1/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+
+  {
+    "file": "recipes/grid/metal/repair/snowshoes-fur",
+    "path": "/0/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "recipes/grid/metal/repair/snowshoes-fur",
+    "path": "/1/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "recipes/grid/metal/repair/snowshoes-fur",
+    "path": "/1/ingredients/F/skipVariants/-",
+    "op": "addmerge",
+    "value": "aluminumsturdy",
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  },
+  {
+    "file": "recipes/grid/metal/repair/snowshoes-fur",
+    "path": "/2/enabled",
+    "op": "replace",
+    "value": true,
+    "dependsOn": [ { "modid": "bauxitealuminum" } ]
+  }
+]
