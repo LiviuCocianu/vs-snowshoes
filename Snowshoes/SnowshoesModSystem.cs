@@ -45,8 +45,6 @@ namespace Snowshoes
         {
             sapi = api;
 
-            api.Network.RegisterChannel("snowshoes-durability");
-
             HandleDurabilityDepletion(api);
 
             api.Event.PlayerLeave += (pl) =>

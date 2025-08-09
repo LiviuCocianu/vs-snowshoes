@@ -67,5 +67,10 @@
   "block-tallgrass-medium-*": "Grass (Medium)",
   "block-tallgrass-tall-*": "Grass (Tall)",
   "block-tallgrass-verytall-*": "Grass (Very tall)",
-  "block-tallgrass-eaten-*": "Grass (Eaten)"
+  "block-tallgrass-eaten-*": "Grass (Eaten)",
+
+  "item-snowshoes-plain*": "Snowshoes (OLD)",
+  "item-snowshoes-fur*": "Knee-high fur snowshoes (OLD)",
+  "itemdesc-snowshoes-plain*": "<font color=\"#ff4545\">Please throw me on the ground!</font>\n",
+  "itemdesc-snowshoes-fur*": "<font color=\"#ff4545\">Please throw me on the ground!</font>\n"
 }

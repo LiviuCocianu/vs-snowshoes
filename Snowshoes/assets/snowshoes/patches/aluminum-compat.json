@@ -83,14 +83,14 @@
     "op": "addmerge",
     "value": {
       "snowshoes-metal-aluminum-*": {
+        "seraph": { "base": "game:block/transparent" },
         "leather": { "base": "item/snowshoes/lattices/leather-plain" },
-        "shoe": { "base": "item/snowshoes/shoe/plain" },
-        "seraph": { "base": "game:block/transparent" }
+        "shoe": { "base": "item/snowshoes/shoe/plain" }
       },
       "snowshoes-metal-aluminumsturdy-*": {
+        "seraph": { "base": "game:block/transparent" },
         "leather": { "base": "item/snowshoes/lattices/leather-sturdy" },
-        "shoe": { "base": "item/snowshoes/shoe/sturdy" },
-        "seraph": { "base": "game:block/transparent" }
+        "shoe": { "base": "item/snowshoes/shoe/sturdy" }
       }
     },
     "dependsOn": [ { "modid": "bauxitealuminum" } ]

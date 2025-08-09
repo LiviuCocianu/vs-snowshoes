@@ -1,0 +1,16 @@
+[
+  {
+    "file": "itemtypes/snowshoes",
+    "path": "/attributesByType/snowshoes-*-plain-*/psFootware",
+    "op": "addmerge",
+    "value": true,
+    "dependsOn": [ { "modid": "purposefulstorage" } ]
+  },
+  {
+    "file": "itemtypes/snowshoes",
+    "path": "/attributesByType/snowshoes-*-fur-*/psFootware",
+    "op": "addmerge",
+    "value": true,
+    "dependsOn": [ { "modid": "purposefulstorage" } ]
+  }
+]

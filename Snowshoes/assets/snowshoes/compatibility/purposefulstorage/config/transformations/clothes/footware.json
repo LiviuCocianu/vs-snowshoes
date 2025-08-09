@@ -1,0 +1,26 @@
+{
+  "snowshoes:snowshoes-*-plain-*": {
+    "origin": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "translation": {
+      "x": 0,
+      "y": 0.35,
+      "z": 0
+    }
+  },
+  "snowshoes:snowshoes-*-fur-*": {
+    "origin": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "translation": {
+      "x": 0,
+      "y": 0.35,
+      "z": 0
+    }
+  }
+}
