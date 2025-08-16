@@ -1,0 +1,24 @@
+[
+  {
+    "name": "snowshoes crude repair",
+    "ingredientPattern": "FT",
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "snowshoes-wooden-crude-plain-untreated"
+      },
+      "T": {
+        "type": "item",
+        "code": "game:rope"
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "copyAttributesFrom": "F",
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "snowshoes-wooden-crude-plain-untreated"
+    }
+  }
+]

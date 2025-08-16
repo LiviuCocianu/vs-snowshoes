@@ -1,47 +1,51 @@
 [
   {
+    "name": "snowshoes metal fur leather repair",
+    "enabled": false,
     "ingredientPattern": "FS",
     "ingredients": {
       "F": {
         "type": "item",
-        "code": "snowshoes-wooden-*-fur-untreated",
-        "name": "wood"
+        "code": "snowshoes-metal-*-fur-untreated",
+        "name": "metal",
+        "skipVariants": []
       },
       "S": {
         "type": "item",
-        "code": "game:sewingkit"
+        "code": "game:leather-normal-plain"
       }
     },
     "width": 2,
     "height": 1,
-    "copyAttributesFrom": "F",
     "shapeless": true,
+    "copyAttributesFrom": "F",
     "output": {
       "type": "item",
-      "code": "snowshoes-wooden-{wood}-fur-untreated"
+      "code": "snowshoes-metal-{metal}-fur-untreated"
     }
   },
   {
+    "name": "snowshoes metal fur sturdy leather repair",
+    "enabled": false,
     "ingredientPattern": "FS",
     "ingredients": {
       "F": {
         "type": "item",
-        "code": "snowshoes-wooden-*-fur-treated",
-        "name": "wood"
+        "code": "snowshoes-metal-*sturdy-fur-untreated",
+        "name": "metal"
       },
       "S": {
         "type": "item",
-        "code": "game:sewingkit"
+        "code": "game:leather-sturdy-plain"
       }
     },
     "width": 2,
     "height": 1,
-    "requiresTrait": "clothier",
-    "copyAttributesFrom": "F",
     "shapeless": true,
+    "copyAttributesFrom": "F",
     "output": {
       "type": "item",
-      "code": "snowshoes-wooden-{wood}-fur-treated"
+      "code": "snowshoes-metal-{metal}sturdy-fur-untreated"
     }
   }
 ]

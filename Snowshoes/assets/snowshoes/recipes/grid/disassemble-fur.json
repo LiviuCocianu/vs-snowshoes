@@ -1,0 +1,46 @@
+[
+  {
+    "name": "snowshoes:disassemble-untreated",
+    "ingredientPattern": "F",
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "snowshoes-wooden-*-fur-untreated",
+        "quantity": 1,
+        "name": "wood"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "shapeless": true,
+    "showInCreatedBy": false,
+    "copyAttributesFrom": "F",
+    "output": {
+      "type": "item",
+      "code": "snowshoes-wooden-{wood}-plain-untreated",
+      "quantity": 1
+    }
+  },
+  {
+    "name": "snowshoes:disassemble-treated",
+    "ingredientPattern": "F",
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "snowshoes-wooden-*-fur-treated",
+        "quantity": 1,
+        "name": "wood"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "shapeless": true,
+    "showInCreatedBy": false,
+    "copyAttributesFrom": "F",
+    "output": {
+      "type": "item",
+      "code": "snowshoes-wooden-{wood}-plain-treated",
+      "quantity": 1
+    }
+  }
+]

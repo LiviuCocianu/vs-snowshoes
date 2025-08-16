@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Snowshoes.src.itemtypes
 {
-    internal enum SnowshoesType
+    internal enum SnowshoeRepairMaterial
     {
-        TRADITIONAL,
-        MODERN
+        TWINE,
+        ROPE,
+        LEATHER
     }
 }
