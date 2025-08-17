@@ -5,7 +5,7 @@
   "authors": [
     "LivCi"
   ],
-  "description": "Adds pairs of shoes that allow you to walk over snow and without being slowed down",
+  "description": "Travel winter terrain without the slowdown of deep snow",
   "version": "2.0.0",
   "dependencies": {
     "game": "",
