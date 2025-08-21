@@ -31,7 +31,7 @@
     "ingredients": {
       "S": {
         "type": "item",
-        "code": "snowshoes-wooden-*-plain-untreated",
+        "code": "snowshoes-wooden-*-plain-treated",
         "name": "wood",
         "skipVariants": [ "crude" ]
       },

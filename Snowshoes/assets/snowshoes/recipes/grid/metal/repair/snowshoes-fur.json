@@ -1,6 +1,7 @@
 [
   {
     "name": "snowshoes metal fur leather repair",
+    "recipeGroup": 1,
     "enabled": false,
     "ingredientPattern": "FL",
     "ingredients": {
@@ -26,6 +27,7 @@
   },
   {
     "name": "snowshoes metal fur sturdy leather repair",
+    "recipeGroup": 2,
     "enabled": false,
     "ingredientPattern": "FL",
     "ingredients": {

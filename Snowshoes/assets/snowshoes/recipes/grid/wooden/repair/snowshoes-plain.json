@@ -1,6 +1,7 @@
 [
   {
     "name": "snowshoes wooden plain untreated repair",
+    "recipeGroup": 1,
     "ingredientPattern": "FT",
     "ingredients": {
       "F": {
@@ -25,6 +26,7 @@
   },
   {
     "name": "snowshoes wooden plain treated repair",
+    "recipeGroup": 2,
     "ingredientPattern": "FT",
     "ingredients": {
       "F": {

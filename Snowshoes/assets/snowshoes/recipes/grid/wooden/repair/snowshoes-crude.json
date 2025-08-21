@@ -1,6 +1,7 @@
 [
   {
     "name": "snowshoes crude repair",
+    "recipeGroup": 1,
     "ingredientPattern": "FT",
     "ingredients": {
       "F": {

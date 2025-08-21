@@ -1,6 +1,7 @@
 [
   {
     "name": "snowshoes metal plain leather repair",
+    "recipeGroup": 1,
     "enabled": false,
     "ingredientPattern": "FS",
     "ingredients": {
@@ -27,6 +28,7 @@
   },
   {
     "name": "snowshoes metal plain sturdy leather repair",
+    "recipeGroup": 1,
     "enabled": false,
     "ingredientPattern": "FS",
     "ingredients": {

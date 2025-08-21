@@ -77,18 +77,11 @@
       "attachableToEntity": {
         "texturePrefixCode": "snowshoes"
       },
-      "groundStorageTransform": {
-        "translation": {
-          "x": -0.05,
-          "y": 0.02,
-          "z": 0
-        },
-        "origin": {
-          "x": 0.5,
-          "y": 0,
-          "z": 0.5
-        }
-      }
+	    "groundStorageTransform": {
+		    "translation": { "x": 0, "y": 0.02, "z": 0.1 },
+		    "rotation": { "x": 0, "y": 90, "z": 0 },
+		    "origin": { "x": 0.5, "y": 0, "z": 0.5 }
+	    }
     }
   },
   "creativeinventory": {
@@ -98,6 +91,9 @@
   "shapeByType": {
     "snowshoes-wooden-crude-*": {
       "base": "snowshoes:item/snowshoes/wooden/crude/{style}"
+    },
+    "snowshoes-wooden-*-treated": {
+      "base": "snowshoes:item/snowshoes/wooden/carved/treated/{style}"
     },
     "snowshoes-wooden-*": {
       "base": "snowshoes:item/snowshoes/wooden/carved/{style}"

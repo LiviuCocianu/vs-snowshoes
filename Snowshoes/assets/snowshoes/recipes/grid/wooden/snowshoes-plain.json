@@ -1,5 +1,6 @@
 [
   {
+    "name": "snowshoes wooden plain untreated",
     "ingredientPattern": "KPL,PTP,SP_",
     "width": 3,
     "height": 3,
@@ -37,29 +38,6 @@
     "output": {
       "type": "item",
       "code": "snowshoes-wooden-{wood}-plain-untreated"
-    }
-  },
-  {
-    "ingredientPattern": "SW",
-    "width": 2,
-    "height": 1,
-    "ingredients": {
-      "S": {
-        "type": "item",
-        "code": "snowshoes-wooden-*-plain-untreated",
-        "name": "wood",
-        "skipVariants": [ "crude" ]
-      },
-      "W": {
-        "type": "item",
-        "code": "game:beeswax"
-      }
-    },
-    "copyAttributesFrom": "S",
-    "shapeless": true,
-    "output": {
-      "type": "item",
-      "code": "snowshoes-wooden-{wood}-plain-waxed"
     }
   }
 ]
