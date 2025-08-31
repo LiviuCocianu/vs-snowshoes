@@ -1,10 +1,13 @@
 {
   "code": "snowshoes",
-  "class": "snowshoes.snowshoes",
+  "classByType": {
+    "snowshoes-*-plain-*": "SnowshoesPlain",
+    "snowshoes-*-fur-*": "SnowshoesFur"
+  },
   "variantgroups": [
     {
       "code": "grade",
-      "states": [ "wooden", "plain", "fur" ]
+      "states": [ "wooden" ]
     },
     {
       "code": "wooden",
@@ -25,13 +28,7 @@
     "snowshoes-wooden-crude-plain-waxed",
     "snowshoes-wooden-crude-plain-treated",
     "snowshoes-wooden-crude-fur-*",
-    "snowshoes-*-fur-waxed",
-    "snowshoes-plain-fur-*",
-    "snowshoes-plain-plain-waxed",
-    "snowshoes-plain-plain-treated",
-    "snowshoes-fur-plain-*",
-    "snowshoes-fur-fur-waxed",
-    "snowshoes-fur-fur-treated"
+    "snowshoes-*-fur-waxed"
   ],
   "storageFlags": 128,
   "attributesByType": {
@@ -39,7 +36,6 @@
       "clothescategory": "foot",
       "wearableAttachment": true,
       "rackable": true,
-      "warmth": 0,
       "attachableToEntity": {
         "texturePrefixCode": "snowshoes"
       },
@@ -93,42 +89,6 @@
           "z": 0.5
         }
       }
-    },
-    "@snowshoes-(plain|fur).*": {
-      "clothescategory": "foot",
-      "wearableAttachment": true,
-      "rackable": true,
-      "warmth": 0,
-      "groundStorageTransform": {
-        "translation": {
-          "x": 0,
-          "y": 0.34,
-          "z": 0.32
-        },
-        "rotation": {
-          "x": 0,
-          "y": -75,
-          "z": 75
-        },
-        "origin": {
-          "x": 0.5,
-          "y": 0,
-          "z": 0.5
-        }
-      },
-      "toolrackTransform": {
-        "translation": {
-          "x": 0,
-          "y": -0.67,
-          "z": 0
-        },
-        "rotation": {
-          "x": 0,
-          "y": 180,
-          "z": 180
-        },
-        "scale": 1.2
-      }
     }
   },
   "creativeinventory": {
@@ -141,12 +101,6 @@
     },
     "snowshoes-wooden-*": {
       "base": "snowshoes:item/snowshoes/wooden/carved/{style}"
-    },
-    "snowshoes-plain-*": {
-      "base": "snowshoes:item/snowshoes/old/plain"
-    },
-    "snowshoes-fur-*": {
-      "base": "snowshoes:item/snowshoes/old/fur"
     }
   },
   "texturesByType": {
@@ -190,9 +144,7 @@
   "durabilitybytype": {
     "snowshoes-wooden-crude-plain-*": 150,
     "snowshoes-wooden-*-treated": 450,
-    "snowshoes-wooden-*": 300,
-    "snowshoes-plain-*": 1,
-    "snowshoes-fur-*": 1
+    "snowshoes-wooden-*": 300
   },
   "behaviorsByType": {
     "*-plain-*": [

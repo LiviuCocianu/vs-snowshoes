@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Vintagestory;
 using Vintagestory.API.Common;
@@ -14,10 +15,16 @@ namespace Snowshoes.src.utils
 {
     internal class InventoryUtils
     {
-        public static ItemStack GetSnowshoes(IServerPlayer pl)
-        {
+        public static ItemSlot GetFootwareSlot(IPlayer pl) {
             InventoryCharacter inv = (InventoryCharacter)pl.InventoryManager.GetInventory(pl.InventoryManager.GetInventoryName("character"));
             ItemSlot slotBoots = inv.ElementAt(4);
+
+            return slotBoots;
+        }
+
+        public static ItemStack GetSnowshoes(IPlayer pl)
+        {
+            ItemSlot slotBoots = GetFootwareSlot(pl);
 
             if (slotBoots == null) return null;
 
@@ -26,11 +33,14 @@ namespace Snowshoes.src.utils
 
         public static Tuple<bool, ItemStack> AreSnowshoesEquipped(IPlayer pl)
         {
-            InventoryCharacter inv = (InventoryCharacter)pl.InventoryManager.GetInventory(pl.InventoryManager.GetInventoryName("character"));
-            ItemSlot slotBoots = inv.ElementAt(4);
-            bool equipped = !slotBoots.Empty && slotBoots.Itemstack.Item.FirstCodePart().Equals("snowshoes");
+            ItemSlot slotBoots = GetFootwareSlot(pl);
 
-            return new Tuple<bool, ItemStack>(equipped, slotBoots.Itemstack);
+            if(slotBoots.Itemstack == null || slotBoots.Itemstack.Item == null)
+                return new Tuple<bool, ItemStack>(false, null);
+
+            bool codeIsSnowshoes = Regex.IsMatch(slotBoots.Itemstack.Item.Code, @"snowshoes-.*-(plain|fur).*");
+
+            return new Tuple<bool, ItemStack>(!slotBoots.Empty && codeIsSnowshoes, slotBoots.Itemstack);
         }
 
         public static void MarkSnowshoesSlotDirty(IServerPlayer pl)
