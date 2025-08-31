@@ -1,0 +1,27 @@
+{
+  "ingredientPattern": "KS_,SRS,_S_",
+  "width": 3,
+  "height": 3,
+  "ingredients": {
+    "K": {
+      "type": "item",
+      "code": "game:knife-*",
+      "isTool": true,
+      "toolDurabilityCost": 2
+    },
+    "R": {
+      "type": "item",
+      "code": "game:rope",
+      "quantity": 2
+    },
+    "S": {
+      "type": "item",
+      "code": "game:stick",
+      "quantity": 2
+    }
+  },
+  "output": {
+    "type": "item",
+    "code": "snowshoes-wooden-crude-plain-untreated"
+  }
+}

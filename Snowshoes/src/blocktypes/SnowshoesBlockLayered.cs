@@ -1,0 +1,57 @@
+﻿using Vintagestory.API.Common;
+using Vintagestory.API.MathTools;
+using Vintagestory.GameContent;
+
+namespace Snowshoes.src.blocktypes
+{
+    public class SnowshoesBlockLayered : BlockLayered
+    {
+        public new Block GetNextLayer(IWorldAccessor world)
+        {
+            int.TryParse(Code.Path.Split('-')[1], out var result);
+            string text = CodeWithoutParts(1);
+            if (result < 7)
+            {
+                return world.BlockAccessor.GetBlock(CodeWithPath(text + "-" + (result + 1)));
+            }
+
+            return world.BlockAccessor.GetBlock(new AssetLocation("game:snowblock"));
+        }
+
+        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref string failureCode)
+        {
+            if (!world.Claims.TryAccess(byPlayer, blockSel.Position, EnumBlockAccessFlags.BuildOrBreak))
+            {
+                byPlayer.InventoryManager.ActiveHotbarSlot.MarkDirty();
+                failureCode = "claimed";
+                return false;
+            }
+
+            Block block = world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(blockSel.Face.Opposite));
+
+            if (block is SnowshoesBlockLayered)
+            {
+                Block nextBlock = ((SnowshoesBlockLayered)block).GetNextLayer(world);
+                world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position.AddCopy(blockSel.Face.Opposite));
+
+                return true;
+            }
+
+            if (!CanLayerStay(world, blockSel.Position))
+            {
+                failureCode = "belowblockcannotsupport";
+                return false;
+            }
+
+            return base.DoPlaceBlock(world, byPlayer, blockSel, itemstack);
+        }
+
+        bool CanLayerStay(IWorldAccessor world, BlockPos pos)
+        {
+            BlockPos belowPos = pos.DownCopy();
+            Block block = world.BlockAccessor.GetBlock(belowPos);
+
+            return block.CanAttachBlockAt(world.BlockAccessor, this, belowPos, BlockFacing.UP);
+        }
+    }
+}

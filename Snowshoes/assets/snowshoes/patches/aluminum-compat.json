@@ -145,16 +145,16 @@
   },
   {
     "file": "recipes/grid/metal/repair/snowshoes-plain",
-    "path": "/0/ingredients/F/skipVariants/-",
-    "op": "addmerge",
-    "value": "aluminumsturdy",
+    "path": "/1/enabled",
+    "op": "replace",
+    "value": true,
     "dependsOn": [ { "modid": "bauxitealuminum" } ]
   },
   {
     "file": "recipes/grid/metal/repair/snowshoes-plain",
-    "path": "/1/enabled",
-    "op": "replace",
-    "value": true,
+    "path": "/0/ingredients/F/skipVariants/-",
+    "op": "addmerge",
+    "value": "aluminumsturdy",
     "dependsOn": [ { "modid": "bauxitealuminum" } ]
   },
 
@@ -174,7 +174,7 @@
   },
   {
     "file": "recipes/grid/metal/repair/snowshoes-fur",
-    "path": "/1/ingredients/F/skipVariants/-",
+    "path": "/0/ingredients/F/skipVariants/-",
     "op": "addmerge",
     "value": "aluminumsturdy",
     "dependsOn": [ { "modid": "bauxitealuminum" } ]

@@ -1,0 +1,33 @@
+{
+  "enabled": false,
+  "ingredient": {
+    "type": "item",
+    "code": "game:ingot-*",
+    "name": "metal",
+    "allowedVariants": [ ]
+  },
+  "name": "shoeframe",
+  "pattern": [
+    [
+      "_###_",
+      "#___#",
+      "#___#",
+      "#___#",
+      "#___#",
+      "#___#",
+      "_###_",
+      "_____",
+      "_###_",
+      "#___#",
+      "#___#",
+      "#___#",
+      "#___#",
+      "#___#",
+      "_###_"
+    ]
+  ],
+  "output": {
+    "type": "item",
+    "code": "shoeframe-{metal}"
+  }
+}
