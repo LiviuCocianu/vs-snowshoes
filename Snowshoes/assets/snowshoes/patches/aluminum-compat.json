@@ -107,8 +107,8 @@
     "path": "/durabilitybytype",
     "op": "addmerge",
     "value": {
-      "snowshoes-metal-aluminum-*": 600,
-      "snowshoes-metal-aluminumsturdy-*": 750
+      "snowshoes-metal-aluminum-*": 750,
+      "snowshoes-metal-aluminumsturdy-*": 900
     },
     "dependsOn": [ { "modid": "bauxitealuminum" } ]
   },
