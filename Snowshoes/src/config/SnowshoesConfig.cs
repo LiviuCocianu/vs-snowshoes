@@ -71,5 +71,20 @@ namespace Snowshoes.src.config {
          * Used by metal snowshoes only.
          */
         public float leatherRepairPercentage = 0.3f;
+
+        /*
+         * Let players repair snowshoes as much as they want or limit how many times snowshoes
+         * can be repaired, up to a max repair count value.
+         */
+        public bool unlimitedRepairs = true;
+
+        /*
+         * How many times can snowshoes be repaired before they become unrepairable.
+         * 
+         * Counter increases relative to how many materials have been used in total to repair
+         * the item, not relative to each repair in the grid!
+         */
+        public int maxRepairCountWood = 10;
+        public int maxRepairCountMetal = 10;
     }
 }

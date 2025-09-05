@@ -1,6 +1,6 @@
 [
   {
-    "name": "snowshoes:assemble-untreated",
+    "name": "snowshoes:assemble-untreated-fur",
     "ingredientPattern": "F,S",
     "width": 1,
     "height": 2,
@@ -24,14 +24,14 @@
     }
   },
   {
-    "name": "snowshoes:assemble-treated",
+    "name": "snowshoes:assemble-treated-fur",
     "ingredientPattern": "F,S",
     "width": 1,
     "height": 2,
     "ingredients": {
       "S": {
         "type": "item",
-        "code": "snowshoes-wooden-*-plain-untreated",
+        "code": "snowshoes-wooden-*-plain-treated",
         "name": "wood",
         "skipVariants": [ "crude" ]
       },

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "snowshoes:disassemble-untreated-reindeer",
+    "ingredientPattern": "F",
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "snowshoes-wooden-*-reindeer-untreated",
+        "quantity": 1,
+        "name": "wood"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "shapeless": true,
+    "showInCreatedBy": false,
+    "copyAttributesFrom": "F",
+    "output": {
+      "type": "item",
+      "code": "snowshoes-wooden-{wood}-plain-untreated",
+      "quantity": 1
+    }
+  },
+  {
+    "name": "snowshoes:disassemble-treated-reindeer",
+    "ingredientPattern": "F",
+    "ingredients": {
+      "F": {
+        "type": "item",
+        "code": "snowshoes-wooden-*-reindeer-treated",
+        "quantity": 1,
+        "name": "wood"
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "shapeless": true,
+    "showInCreatedBy": false,
+    "copyAttributesFrom": "F",
+    "output": {
+      "type": "item",
+      "code": "snowshoes-wooden-{wood}-plain-treated",
+      "quantity": 1
+    }
+  }
+]

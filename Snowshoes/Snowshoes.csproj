@@ -59,4 +59,8 @@
   </Content>
 </ItemGroup>
 
+<ItemGroup>
+  <Folder Include="assets\snowshoes\shapes\item\snowshoes\wooden\carved\treated\" />
+</ItemGroup>
+
 </Project>

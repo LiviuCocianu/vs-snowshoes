@@ -1,51 +1,51 @@
 [
   {
-    "name": "snowshoes metal fur leather repair",
+    "name": "snowshoes metal nadiyanbrown leather repair",
     "enabled": false,
-    "ingredientPattern": "FS",
+    "ingredientPattern": "FL",
     "ingredients": {
       "F": {
         "type": "item",
-        "code": "snowshoes-metal-*-fur-untreated",
+        "code": "snowshoes-metal-*-nadiyanbrown-untreated",
         "name": "metal",
         "skipVariants": []
       },
-      "S": {
+      "L": {
         "type": "item",
         "code": "game:leather-normal-plain"
       }
     },
     "width": 2,
     "height": 1,
-    "shapeless": true,
     "copyAttributesFrom": "F",
+    "shapeless": true,
     "output": {
       "type": "item",
-      "code": "snowshoes-metal-{metal}-fur-untreated"
+      "code": "snowshoes-metal-{metal}-nadiyanbrown-untreated"
     }
   },
   {
-    "name": "snowshoes metal fur sturdy leather repair",
+    "name": "snowshoes metal nadiyanbrown sturdy leather repair",
     "enabled": false,
-    "ingredientPattern": "FS",
+    "ingredientPattern": "FL",
     "ingredients": {
       "F": {
         "type": "item",
-        "code": "snowshoes-metal-*sturdy-fur-untreated",
+        "code": "snowshoes-metal-*sturdy-nadiyanbrown-untreated",
         "name": "metal"
       },
-      "S": {
+      "L": {
         "type": "item",
         "code": "game:leather-sturdy-plain"
       }
     },
     "width": 2,
     "height": 1,
-    "shapeless": true,
     "copyAttributesFrom": "F",
+    "shapeless": true,
     "output": {
       "type": "item",
-      "code": "snowshoes-metal-{metal}sturdy-fur-untreated"
+      "code": "snowshoes-metal-{metal}-nadiyanbrown-untreated"
     }
   }
 ]

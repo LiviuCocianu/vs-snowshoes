@@ -42,10 +42,59 @@
   "item-snowshoes-wooden-redwood-fur-*": "Knee-high fur snowshoes (Redwood)",
   "item-snowshoes-wooden-walnut-fur-*": "Knee-high fur snowshoes (Walnut)",
 
+  "item-snowshoes-wooden-acacia-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Acacia)",
+  "item-snowshoes-wooden-baldcypress-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Bald Cypress)",
+  "item-snowshoes-wooden-bamboo-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Bamboo)",
+  "item-snowshoes-wooden-birch-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Birch)",
+  "item-snowshoes-wooden-ebony-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Ebony)",
+  "item-snowshoes-wooden-kapok-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Kapok)",
+  "item-snowshoes-wooden-larch-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Larch)",
+  "item-snowshoes-wooden-maple-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Maple)",
+  "item-snowshoes-wooden-oak-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Oak)",
+  "item-snowshoes-wooden-pine-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Pine)",
+  "item-snowshoes-wooden-purpleheart-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Purpleheart)",
+  "item-snowshoes-wooden-redwood-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Redwood)",
+  "item-snowshoes-wooden-walnut-nadiyanbrown-*": "Brown Nadiyan fur-lined snowshoes (Walnut)",
+
+  "item-snowshoes-wooden-acacia-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Acacia)",
+  "item-snowshoes-wooden-baldcypress-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Bald Cypress)",
+  "item-snowshoes-wooden-bamboo-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Bamboo)",
+  "item-snowshoes-wooden-birch-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Birch)",
+  "item-snowshoes-wooden-ebony-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Ebony)",
+  "item-snowshoes-wooden-kapok-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Kapok)",
+  "item-snowshoes-wooden-larch-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Larch)",
+  "item-snowshoes-wooden-maple-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Maple)",
+  "item-snowshoes-wooden-oak-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Oak)",
+  "item-snowshoes-wooden-pine-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Pine)",
+  "item-snowshoes-wooden-purpleheart-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Purpleheart)",
+  "item-snowshoes-wooden-redwood-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Redwood)",
+  "item-snowshoes-wooden-walnut-nadiyanblue-*": "Blue Nadiyan fur-lined snowshoes (Walnut)",
+
+  "item-snowshoes-wooden-acacia-reindeer-*": "Fur-lined reindeer herder snowshoes (Acacia)",
+  "item-snowshoes-wooden-baldcypress-reindeer-*": "Fur-lined reindeer herder snowshoes (Bald Cypress)",
+  "item-snowshoes-wooden-bamboo-reindeer-*": "Fur-lined reindeer herder snowshoes (Bamboo)",
+  "item-snowshoes-wooden-birch-reindeer-*": "Fur-lined reindeer herder snowshoes (Birch)",
+  "item-snowshoes-wooden-ebony-reindeer-*": "Fur-lined reindeer herder snowshoes (Ebony)",
+  "item-snowshoes-wooden-kapok-reindeer-*": "Fur-lined reindeer herder snowshoes (Kapok)",
+  "item-snowshoes-wooden-larch-reindeer-*": "Fur-lined reindeer herder snowshoes (Larch)",
+  "item-snowshoes-wooden-maple-reindeer-*": "Fur-lined reindeer herder snowshoes (Maple)",
+  "item-snowshoes-wooden-oak-reindeer-*": "Fur-lined reindeer herder snowshoes (Oak)",
+  "item-snowshoes-wooden-pine-reindeer-*": "Fur-lined reindeer herder snowshoes (Pine)",
+  "item-snowshoes-wooden-purpleheart-reindeer-*": "Fur-lined reindeer herder snowshoes (Purpleheart)",
+  "item-snowshoes-wooden-redwood-reindeer-*": "Fur-lined reindeer herder snowshoes (Redwood)",
+  "item-snowshoes-wooden-walnut-reindeer-*": "Fur-lined reindeer herder snowshoes (Walnut)",
+
   "item-snowshoes-metal-aluminum-plain-untreated": "Metal snowshoes (Aluminum)",
   "item-snowshoes-metal-aluminum-fur-untreated": "Knee-high fur snowshoes (Aluminum)",
+  "item-snowshoes-metal-aluminum-nadiyanbrown-untreated": "Brown Nadiyan fur-lined snowshoes (Aluminum)",
+  "item-snowshoes-metal-aluminum-nadiyanblue-untreated": "Blue Nadiyan fur-lined snowshoes (Aluminum)",
+  "item-snowshoes-metal-aluminum-reindeer-untreated": "Fur-lined reindeer herder snowshoes (Aluminum)",
+
   "item-snowshoes-metal-aluminumsturdy-plain-untreated": "Metal snowshoes (Aluminum)",
   "item-snowshoes-metal-aluminumsturdy-fur-untreated": "Knee-high fur snowshoes (Aluminum)",
+  "item-snowshoes-metal-aluminumsturdy-nadiyanbrown-untreated": "Brown Nadiyan fur-lined snowshoes (Aluminum)",
+  "item-snowshoes-metal-aluminumsturdy-nadiyanblue-untreated": "Blue Nadiyan fur-lined snowshoes (Aluminum)",
+  "item-snowshoes-metal-aluminumsturdy-reindeer-untreated": "Fur-lined reindeer herder snowshoes (Aluminum)",
 
   "item-shoeframe-aluminum": "Snowshoes frame pair (Aluminum)",
 
@@ -54,11 +103,24 @@
   "itemdesc-snowshoes-wooden-*-plain-waxed": "A very simple, yet effective way of besting the unforgiving winter.\n\nThis pair should be placed on a tool rack to dry..\n",
   "itemdesc-snowshoes-wooden-*-fur-untreated": "Snowshoes improvised with knee-high fur boots.\n\nVery straight forward, and no more frozen feet!\n",
   "itemdesc-snowshoes-wooden-*-fur-treated": "Snowshoes improvised with knee-high fur boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">This pair seems to be wax-treated</font>\n",
+  "itemdesc-snowshoes-wooden-*-nadiyanbrown-untreated": "Snowshoes improvised with Nadiyan fur-lined boots.\n\nVery straight forward, and no more frozen feet!\n",
+  "itemdesc-snowshoes-wooden-*-nadiyanbrown-treated": "Snowshoes improvised with Nadiyan fur-lined boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">This pair seems to be wax-treated</font>\n",
+  "itemdesc-snowshoes-wooden-*-nadiyanblue-untreated": "Snowshoes improvised with Nadiyan fur-lined boots.\n\nVery straight forward, and no more frozen feet!\n",
+  "itemdesc-snowshoes-wooden-*-nadiyanblue-treated": "Snowshoes improvised with Nadiyan fur-lined boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">This pair seems to be wax-treated</font>\n",
+  "itemdesc-snowshoes-wooden-*-reindeer-untreated": "Snowshoes improvised with fur-lined reindeer herder boots.\n\nVery straight forward, and no more frozen feet!\n",
+  "itemdesc-snowshoes-wooden-*-reindeer-treated": "Snowshoes improvised with fur-lined reindeer herder boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">This pair seems to be wax-treated</font>\n",
 
   "itemdesc-snowshoes-metal-aluminum-plain-untreated": "Much lighter and much more durable than its wooden predecessor.\n",
   "itemdesc-snowshoes-metal-aluminum-fur-untreated": "Snowshoes improvised with knee-high fur boots.\n\nVery straight forward, and no more frozen feet!\n",
+  "itemdesc-snowshoes-metal-aluminum-nadiyanbrown-untreated": "Snowshoes improvised with Nadiyan fur-lined boots.\n\nVery straight forward, and no more frozen feet!\n",
+  "itemdesc-snowshoes-metal-aluminum-nadiyanblue-untreated": "Snowshoes improvised with Nadiyan fur-lined boots.\n\nVery straight forward, and no more frozen feet!\n",
+  "itemdesc-snowshoes-metal-aluminum-reindeer-untreated": "Snowshoes improvised with fur-lined reindeer herder boots.\n\nVery straight forward, and no more frozen feet!\n",
+
   "itemdesc-snowshoes-metal-aluminumsturdy-plain-untreated": "Much lighter and much more durable than its wooden predecessor.\n\n<font color=\"#99c9f9\">Extra durability from sturdy leather</font>\n",
   "itemdesc-snowshoes-metal-aluminumsturdy-fur-untreated": "Snowshoes improvised with knee-high fur boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">Extra durability from sturdy leather</font>\n",
+  "itemdesc-snowshoes-metal-aluminumsturdy-nadiyanbrown-untreated": "Snowshoes improvised with Nadiyan fur-lined boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">Extra durability from sturdy leather</font>\n",
+  "itemdesc-snowshoes-metal-aluminumsturdy-nadiyanblue-untreated": "Snowshoes improvised with Nadiyan fur-lined boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">Extra durability from sturdy leather</font>\n",
+  "itemdesc-snowshoes-metal-aluminumsturdy-reindeer-untreated": "Snowshoes improvised with fur-lined reindeer herder boots.\n\nVery straight forward, and no more frozen feet!\n\n<font color=\"#99c9f9\">Extra durability from sturdy leather</font>\n",
 
   "block-snowlayer-1": "Snow layer",
   "block-tallgrass-veryshort-*": "Grass (Very short)",
@@ -75,5 +137,11 @@
   "itemdesc-snowshoes-fur": "<font color=\"#ff4545\">Hey! Please pick me up..</font>\n",
 
   "game:gamemechanicinfo-snowtraversal-title": "Game mechanic: Snow traversal",
-  "game:gamemechanicinfo-snowtraversal-text": "<strong>Snow traversal</strong><br><i>From sinking to striding — snowshoes changed winter travel forever!</i><br><br>Traveling during winter can be challenging due to the dense heaps of snow that slow you down. In these situations, a pair of snowshoes can come in handy. Their large design helps distribute your weight over a wider area, allowing you to walk on top of the snow instead of sinking.<br><br>A wide variety of snowshoes can be made at any point of the game, from crude variants with less durability, to professionally crafted wooden snowshoes. Better yet, if you have access to aluminum, you can smith some metal snowshoes with even more durability!<br><br>Snowshoes gradually lose durability as you walk with them, and will eventually break if not attended to! Fortunately, they can be repaired in the crafting grid, but different materials are required depending on the variant:<br><br><strong><a href=\"handbook://item-snowshoes:snowshoes-wooden-crude-plain-untreated\">Crude snowshoes</a></strong>: The easiest to craft, but the least durable. Require rope to repair.<br><br><strong><a href=\"handbook://item-snowshoes:snowshoes-wooden-oak-plain-untreated\">Wooden snowshoes</a></strong>: Decent durability, which can be slightly increased by waxing. Just apply some beeswax and let them dry on a tool rack. Can be repaired with flax twine.<br><br><strong><a href=\"handbook://item-snowshoes:snowshoes-metal-aluminum-plain-untreated\">Metal snowshoes</a></strong>: The most durable type. Require a pair of <a href=\"handbook://item-snowshoes:shoeframe-aluminum\">snowshoe frames</a> to be smithed. They can also be crafted with sturdy leather for an extra durability boost. Repaired with leather or sturdy leather, depending on the materials used in crafting.<br><br>Of course, you’ll also need cozy clothing to handle winter’s freezing temperatures. Snowshoes alone don’t provide warmth, but you can attach a pair of fur boots to create <a href=\"handbook://item-snowshoes:snowshoes-wooden-oak-fur-untreated\">fur snowshoes</a>. Crude snowshoes are too poorly made to allow attachments, but any other variant works. Once attached, fur snowshoes function as both equipment and clothing, so their condition and durability must be maintained accordingly.<br><br>If you want to take the fur snowshoes apart, don’t worry! Just place them in the crafting grid to retrieve both the snowshoes and the fur boots.<br><br>Happy snow-striding!"
+  "game:gamemechanicinfo-snowtraversal-text": "<strong>Snow traversal</strong><br><i>From sinking to striding — snowshoes changed winter travel forever!</i><br><br>Traveling during winter can be challenging due to the dense heaps of snow that slow you down. In these situations, a pair of snowshoes can come in handy. Their large design helps distribute your weight over a wider area, allowing you to walk on top of the snow instead of sinking.<br><br>A wide variety of snowshoes can be made at any point of the game, from crude variants with less durability, to professionally crafted wooden snowshoes. Better yet, if you have access to aluminum, you can smith some metal snowshoes with even more durability!<br><br>Snowshoes gradually lose durability as you walk with them, and will eventually break if not attended to! Fortunately, they can be repaired in the crafting grid, but different materials are required depending on the variant:<br><br><strong><a href=\"handbook://item-snowshoes:snowshoes-wooden-crude-plain-untreated\">Crude snowshoes</a></strong>: The easiest to craft, but the least durable. Require rope to repair.<br><br><strong><a href=\"handbook://item-snowshoes:snowshoes-wooden-oak-plain-untreated\">Wooden snowshoes</a></strong>: Decent durability, which can be slightly increased by waxing. Just apply some beeswax on them (also called \"<a href=\"handbook://item-snowshoes:snowshoes-wooden-oak-plain-waxed\">uncured wooden snowshoes</a>\" after beeswax is applied) and let them dry on a tool rack. Can be repaired with flax twine.<br><br><strong><a href=\"handbook://item-snowshoes:snowshoes-metal-aluminum-plain-untreated\">Metal snowshoes</a></strong>: The most durable type. Require a pair of <a href=\"handbook://item-snowshoes:shoeframe-aluminum\">snowshoe frames</a> to be smithed. They can also be crafted with sturdy leather for an extra durability boost. Repaired with leather or sturdy leather, depending on the materials used in crafting.<br><br>Of course, you’ll also need cozy clothing to handle winter’s freezing temperatures. Snowshoes alone don’t provide warmth, but you can attach a pair of fur boots to create <a href=\"handbook://item-snowshoes:snowshoes-wooden-oak-fur-untreated\">fur snowshoes</a>. Crude snowshoes are too poorly made to allow attachments, but any other variant works. Once attached, fur snowshoes function as both equipment and clothing, so their condition and durability must be maintained accordingly.<br><br>If you want to take the fur snowshoes apart, don’t worry! Just place them in the crafting grid to retrieve both the snowshoes and the fur boots.<br><br>Happy snow-striding!",
+
+  // {0} - repair count
+  // {1} - max repair limit; found in config file
+  // {2} - "repairdesc-max" lang entry placeholder; will appear when current repair count and max repair limit are equal
+  "repairdesc": "Have been repaired {0}/{1} times.{2}",
+  "repairdesc-max": "\n<font color=\"#ff4545\">Further repairing of these shoes is not possible anymore..</font>"
 }

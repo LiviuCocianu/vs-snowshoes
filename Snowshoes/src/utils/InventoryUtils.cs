@@ -38,9 +38,10 @@ namespace Snowshoes.src.utils
             if(slotBoots.Itemstack == null || slotBoots.Itemstack.Item == null)
                 return new Tuple<bool, ItemStack>(false, null);
 
-            bool codeIsSnowshoes = Regex.IsMatch(slotBoots.Itemstack.Item.Code, @"snowshoes-.*-(plain|fur).*");
+            bool codeIsSnowshoes1 = Regex.IsMatch(slotBoots.Itemstack.Item.Code, @"snowshoes-.*-plain-.*");
+            bool codeIsSnowshoes2 = SnowshoesFurItem.VARIANTS.Keys.Contains(slotBoots.Itemstack.Item.FirstCodePart(3));
 
-            return new Tuple<bool, ItemStack>(!slotBoots.Empty && codeIsSnowshoes, slotBoots.Itemstack);
+            return new Tuple<bool, ItemStack>(!slotBoots.Empty && (codeIsSnowshoes1 || codeIsSnowshoes2), slotBoots.Itemstack);
         }
 
         public static void MarkSnowshoesSlotDirty(IServerPlayer pl)

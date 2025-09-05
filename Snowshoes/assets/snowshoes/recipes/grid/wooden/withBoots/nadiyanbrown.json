@@ -1,0 +1,50 @@
+[
+  {
+    "name": "snowshoes:assemble-untreated-nadiyanbrown",
+    "ingredientPattern": "F,S",
+    "width": 1,
+    "height": 2,
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "snowshoes-wooden-*-plain-untreated",
+        "name": "wood",
+        "skipVariants": [ "crude" ]
+      },
+      "F": {
+        "type": "item",
+        "code": "game:clothes-nadiya-foot-winter1"
+      }
+    },
+    "shapeless": true,
+    "averageDurability": false,
+    "output": {
+      "type": "item",
+      "code": "snowshoes-wooden-{wood}-nadiyanbrown-untreated"
+    }
+  },
+  {
+    "name": "snowshoes:assemble-treated-nadiyanbrown",
+    "ingredientPattern": "F,S",
+    "width": 1,
+    "height": 2,
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "snowshoes-wooden-*-plain-treated",
+        "name": "wood",
+        "skipVariants": [ "crude" ]
+      },
+      "F": {
+        "type": "item",
+        "code": "game:clothes-nadiya-foot-winter1"
+      }
+    },
+    "shapeless": true,
+    "averageDurability": false,
+    "output": {
+      "type": "item",
+      "code": "snowshoes-wooden-{wood}-nadiyanbrown-treated"
+    }
+  }
+]

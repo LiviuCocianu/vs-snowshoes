@@ -246,6 +246,15 @@ namespace Snowshoes
                                 if (subtracted <= 0) {
                                     InventoryUtils.GetFootwareSlot(spl).Itemstack = null;
 
+                                    // If they are fur snowshoes, give player the fur boots back
+                                    if(SnowshoesFurItem.VARIANTS.Keys.Contains(col.FirstCodePart(3)))
+                                    {
+                                        string furCode = SnowshoesFurItem.VARIANTS.Get(col.FirstCodePart(3));
+                                        ItemStack furBoots = new(pl.Entity.World.SearchItems(furCode)[0]);
+                                        furBoots.Attributes.SetFloat("condition", res.Item2.Attributes.GetFloat("condition", 1));
+                                        pl.Entity.TryGiveItemStack(furBoots);
+                                    }
+
                                     api.World.PlaySoundAt(
                                         new AssetLocation("game:sounds/effect/toolbreak"),
                                         spl.Entity,

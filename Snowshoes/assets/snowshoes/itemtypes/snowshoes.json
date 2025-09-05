@@ -2,7 +2,7 @@
   "code": "snowshoes",
   "classByType": {
     "snowshoes-*-plain-*": "SnowshoesPlain",
-    "snowshoes-*-fur-*": "SnowshoesFur"
+    "@snowshoes-.*-(fur|nadiyan.*|reindeer)-.*": "SnowshoesFur"
   },
   "variantgroups": [
     {
@@ -17,7 +17,7 @@
     },
     {
       "code": "style",
-      "states": [ "plain", "fur" ]
+      "states": [ "plain", "fur", "nadiyanbrown", "nadiyanblue", "reindeer" ]
     },
     {
       "code": "treatment",
@@ -28,7 +28,13 @@
     "snowshoes-wooden-crude-plain-waxed",
     "snowshoes-wooden-crude-plain-treated",
     "snowshoes-wooden-crude-fur-*",
-    "snowshoes-*-fur-waxed"
+    "snowshoes-*-fur-waxed",
+    "snowshoes-wooden-crude-nadiyanbrown-*",
+    "snowshoes-*-nadiyanbrown-waxed",
+    "snowshoes-wooden-crude-nadiyanblue-*",
+    "snowshoes-*-nadiyanblue-waxed",
+    "snowshoes-wooden-crude-reindeer-*",
+    "snowshoes-*-reindeer-waxed"
   ],
   "storageFlags": 128,
   "attributesByType": {
@@ -39,6 +45,7 @@
       "attachableToEntity": {
         "texturePrefixCode": "snowshoes"
       },
+      "repairCount": 0,
       "groundStorageTransform": {
         "translation": {
           "x": 0,
@@ -70,17 +77,23 @@
         "scale": 1.2
       }
     },
-    "snowshoes-*-fur-*": {
+    "@snowshoes-.*-(fur|nadiyan.*)-.*": {
       "clothescategory": "foot",
       "wearableAttachment": true,
       "warmth": 2,
       "attachableToEntity": {
         "texturePrefixCode": "snowshoes"
       },
+      "repairCount": 0,
       "groundStorageTransform": {
         "translation": {
-          "x": -0.05,
+          "x": 0,
           "y": 0.02,
+          "z": 0.1
+        },
+        "rotation": {
+          "x": 0,
+          "y": 90,
           "z": 0
         },
         "origin": {
@@ -88,6 +101,20 @@
           "y": 0,
           "z": 0.5
         }
+      }
+    },
+    "snowshoes-*-reindeer-*": {
+      "clothescategory": "foot",
+      "wearableAttachment": true,
+      "warmth": 4,
+      "attachableToEntity": {
+        "texturePrefixCode": "snowshoes"
+      },
+      "repairCount": 0,
+      "groundStorageTransform": {
+		    "translation": { "x": 0, "y": 0.02, "z": 0.1 },
+		    "rotation": { "x": 0, "y": 90, "z": 0 },
+		    "origin": { "x": 0.5, "y": 0, "z": 0.5 }
       }
     }
   },
@@ -98,6 +125,9 @@
   "shapeByType": {
     "snowshoes-wooden-crude-*": {
       "base": "snowshoes:item/snowshoes/wooden/crude/{style}"
+    },
+    "snowshoes-wooden-*-treated": {
+      "base": "snowshoes:item/snowshoes/wooden/carved/treated/{style}"
     },
     "snowshoes-wooden-*": {
       "base": "snowshoes:item/snowshoes/wooden/carved/{style}"
@@ -159,7 +189,7 @@
         }
       }
     ],
-    "*-fur-*": [
+    "@.*-(fur|nadiyan.*|reindeer)-.*": [
       {
         "name": "GroundStorable",
         "properties": {
@@ -178,7 +208,7 @@
       "origin": { "x": 0.9, "y": -0.3, "z": 1 },
       "scaleXyz": { "x": -2, "y": 2, "z": 2 }
     },
-    "snowshoes-*-fur-*": {
+    "@snowshoes-.*-(fur|nadiyan.*|reindeer)-.*": {
       "translation": { "x": 1.7, "y": 3.5, "z": 0 },
       "rotation": { "x": -36, "y": -142, "z": -180 },
       "origin": { "x": 0.9, "y": -0.3, "z": 1 },
@@ -191,7 +221,7 @@
       "rotation": { "x": -86, "y": 168, "z": 4 },
       "scale": 1
     },
-    "snowshoes-*-fur-*": {
+    "@snowshoes-.*-(fur|nadiyan.*|reindeer)-.*": {
       "translation": { "x": -0.71, "y": -0.66, "z": -0.84 },
       "rotation": { "x": 48, "y": 88, "z": 53 },
       "scale": 0.71

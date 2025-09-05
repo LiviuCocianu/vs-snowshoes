@@ -1,11 +1,11 @@
 [
   {
-    "name": "snowshoes:disassemble-untreated",
+    "name": "snowshoes:disassemble-untreated-nadiyanblue",
     "ingredientPattern": "F",
     "ingredients": {
       "F": {
         "type": "item",
-        "code": "snowshoes-wooden-*-fur-untreated",
+        "code": "snowshoes-wooden-*-nadiyanblue-untreated",
         "quantity": 1,
         "name": "wood"
       }
@@ -22,12 +22,12 @@
     }
   },
   {
-    "name": "snowshoes:disassemble-treated",
+    "name": "snowshoes:disassemble-treated-nadiyanblue",
     "ingredientPattern": "F",
     "ingredients": {
       "F": {
         "type": "item",
-        "code": "snowshoes-wooden-*-fur-treated",
+        "code": "snowshoes-wooden-*-nadiyanblue-treated",
         "quantity": 1,
         "name": "wood"
       }
