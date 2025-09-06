@@ -8,7 +8,14 @@
   },
   {
     "file": "itemtypes/snowshoes",
-    "path": "/attributesByType/snowshoes-*-fur-*/psFootware",
+    "path": "/attributesByType/@snowshoes-.*-(fur|nadiyan.*)-.*/psFootware",
+    "op": "addmerge",
+    "value": true,
+    "dependsOn": [ { "modid": "purposefulstorage" } ]
+  },
+  {
+    "file": "itemtypes/snowshoes",
+    "path": "/attributesByType/snowshoes-*-reindeer-*/psFootware",
     "op": "addmerge",
     "value": true,
     "dependsOn": [ { "modid": "purposefulstorage" } ]

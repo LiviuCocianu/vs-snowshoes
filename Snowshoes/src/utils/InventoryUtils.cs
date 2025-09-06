@@ -17,6 +17,9 @@ namespace Snowshoes.src.utils
     {
         public static ItemSlot GetFootwareSlot(IPlayer pl) {
             InventoryCharacter inv = (InventoryCharacter)pl.InventoryManager.GetInventory(pl.InventoryManager.GetInventoryName("character"));
+
+            if(inv == null) return null;
+
             ItemSlot slotBoots = inv.ElementAt(4);
 
             return slotBoots;
@@ -35,13 +38,30 @@ namespace Snowshoes.src.utils
         {
             ItemSlot slotBoots = GetFootwareSlot(pl);
 
-            if(slotBoots.Itemstack == null || slotBoots.Itemstack.Item == null)
+            if(slotBoots == null || slotBoots.Itemstack == null || slotBoots.Itemstack.Item == null)
                 return new Tuple<bool, ItemStack>(false, null);
 
-            bool codeIsSnowshoes1 = Regex.IsMatch(slotBoots.Itemstack.Item.Code, @"snowshoes-.*-plain-.*");
-            bool codeIsSnowshoes2 = SnowshoesFurItem.VARIANTS.Keys.Contains(slotBoots.Itemstack.Item.FirstCodePart(3));
+            Item shoesItem = slotBoots.Itemstack.Item;
+
+            bool codeIsSnowshoes1 = Regex.IsMatch(shoesItem.Code, @"snowshoes-.*-plain-.*");
+            bool codeIsSnowshoes2 = shoesItem.FirstCodePart(3) == null 
+                ? AreOldSnowshoesEquipped(pl)
+                : SnowshoesFurItem.VARIANTS.ContainsKey(shoesItem.FirstCodePart(3));
 
             return new Tuple<bool, ItemStack>(!slotBoots.Empty && (codeIsSnowshoes1 || codeIsSnowshoes2), slotBoots.Itemstack);
+        }
+
+        public static bool AreOldSnowshoesEquipped(IPlayer pl)
+        {
+            ItemSlot slotBoots = GetFootwareSlot(pl);
+
+            if (slotBoots == null || slotBoots.Itemstack == null || slotBoots.Itemstack.Item == null)
+                return false;
+
+            Item shoesItem = slotBoots.Itemstack.Item;
+            bool codeIsSnowshoes = Regex.IsMatch(shoesItem.Code, @"snowshoes-(plain|fur)");
+
+            return !slotBoots.Empty && codeIsSnowshoes;
         }
 
         public static void MarkSnowshoesSlotDirty(IServerPlayer pl)
@@ -59,6 +79,16 @@ namespace Snowshoes.src.utils
             float result = res.Item2.Attributes.GetFloat("condition", -1);
 
             return result;
+        }
+
+        public static void SetFootAndMarkDirty(IServerPlayer pl, ItemStack toSet)
+        {
+            ItemSlot feet = GetFootwareSlot(pl);
+
+            if (feet == null) return;
+
+            feet.Itemstack = toSet;
+            feet.MarkDirty();
         }
     }
 }

@@ -57,24 +57,32 @@ namespace Snowshoes.src.config {
          * What percentage of max durability will be added to the current durability when repairing snowshoes with flax twine in the crafting grid.
          * 
          * For example, treated snowshoes have 450 max durability, so by default, 135 durability will be added per flax twine.
+         * 
+         * Side: Server
          */
         public float flaxRepairPercentage = 0.3f;
 
         /*
          * What percentage of max durability will be added to the current durability when repairing snowshoes with rope in the crafting grid.
          * Used by crude snowshoes only.
+         * 
+         * Side: Server
          */
         public float ropeRepairPercentage = 0.3f;
 
         /*
          * What percentage of max durability will be added to the current durability when repairing snowshoes with leather in the crafting grid.
          * Used by metal snowshoes only.
+         * 
+         * Side: Server
          */
         public float leatherRepairPercentage = 0.3f;
 
         /*
          * Let players repair snowshoes as much as they want or limit how many times snowshoes
          * can be repaired, up to a max repair count value.
+         * 
+         * Side: Server
          */
         public bool unlimitedRepairs = true;
 
@@ -83,6 +91,8 @@ namespace Snowshoes.src.config {
          * 
          * Counter increases relative to how many materials have been used in total to repair
          * the item, not relative to each repair in the grid!
+         * 
+         * Side: Server
          */
         public int maxRepairCountWood = 10;
         public int maxRepairCountMetal = 10;

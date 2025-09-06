@@ -6,7 +6,7 @@
     "LivCi"
   ],
   "description": "Adds pairs of shoes that allow you to walk over snow and without being slowed down",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "dependencies": {
     "game": "",
     "survival": ""

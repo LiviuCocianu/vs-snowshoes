@@ -93,8 +93,8 @@ namespace Snowshoes
                         config.radiusCheckFrequency = defaults.radiusCheckFrequency;
                     }
 
-                    if (config.durabilityAmount < 0) {
-                        api.Logger.Warning("Config property 'durabilityAmount' cannot be negative! Please change it! Will default to original value");
+                    if (config.durabilityAmount < 1) {
+                        api.Logger.Warning("Config property 'durabilityAmount' cannot go below 1! Please change it! Will default to original value");
                         config.durabilityAmount = defaults.durabilityAmount;
                     }
 
@@ -225,6 +225,17 @@ namespace Snowshoes
                         Tuple<bool, ItemStack> res = InventoryUtils.AreSnowshoesEquipped(spl);
                         float timeMultiplier = 1f;
 
+                        // Convert remnant old snowshoes to the new itemtype before doing anything else
+                        if (InventoryUtils.AreOldSnowshoesEquipped(spl))
+                        {
+                            SnowshoesOldItem.PatchSnowshoesToVersion2(InventoryUtils.GetSnowshoes(spl), (newSh) =>
+                            {
+                                InventoryUtils.SetFootAndMarkDirty(spl, new(newSh));
+                            });
+
+                            return;
+                        }
+
                         // Even if value inside movingWithSnowshoes increases only when having snowshoes equipped, performing checks on all players
                         // regardless of their equipment would be pretty bad. Entry inside this dictionary doesn't get removed in player stops moving
                         if (res.Item1)
@@ -247,12 +258,14 @@ namespace Snowshoes
                                     InventoryUtils.GetFootwareSlot(spl).Itemstack = null;
 
                                     // If they are fur snowshoes, give player the fur boots back
-                                    if(SnowshoesFurItem.VARIANTS.Keys.Contains(col.FirstCodePart(3)))
+                                    if(SnowshoesFurItem.VARIANTS.ContainsKey(col.FirstCodePart(3)))
                                     {
                                         string furCode = SnowshoesFurItem.VARIANTS.Get(col.FirstCodePart(3));
                                         ItemStack furBoots = new(pl.Entity.World.SearchItems(furCode)[0]);
+                                        ItemSlot shoesSlot = InventoryUtils.GetFootwareSlot(pl);
+
                                         furBoots.Attributes.SetFloat("condition", res.Item2.Attributes.GetFloat("condition", 1));
-                                        pl.Entity.TryGiveItemStack(furBoots);
+                                        shoesSlot.Itemstack = furBoots;
                                     }
 
                                     api.World.PlaySoundAt(

@@ -24,9 +24,10 @@ namespace Snowshoes.src.itemtypes
         private static readonly SnowshoesItem snowshoes = new(SnowshoesModSystem.api);
         public static Dictionary<string, string> VARIANTS = [];
 
-        public SnowshoesFurItem() : base()
+        static SnowshoesFurItem()
         {
-            if (VARIANTS.Count == 0) {
+            if (VARIANTS.Count == 0)
+            {
                 VARIANTS.Add("fur", "game:clothes-foot-knee-high-fur-boots");
                 VARIANTS.Add("nadiyanbrown", "game:clothes-nadiya-foot-winter1");
                 VARIANTS.Add("nadiyanblue", "game:clothes-nadiya-foot-winter2");
