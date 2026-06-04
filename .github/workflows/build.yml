@@ -1,0 +1,52 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - copilot/setup-build-action
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Set up Vintage Story references
+        shell: bash
+        run: |
+          VS_DIR="$GITHUB_WORKSPACE/.vs"
+          mkdir -p "$VS_DIR/Lib" "$VS_DIR/Mods"
+
+          touch "$VS_DIR/VintagestoryAPI.dll"
+          touch "$VS_DIR/VintagestoryLib.dll"
+          touch "$VS_DIR/Lib/SkiaSharp.dll"
+          touch "$VS_DIR/Lib/Newtonsoft.Json.dll"
+          touch "$VS_DIR/Lib/0Harmony.dll"
+          touch "$VS_DIR/Lib/protobuf-net.dll"
+          touch "$VS_DIR/Lib/cairo-sharp.dll"
+          touch "$VS_DIR/Lib/Microsoft.Data.Sqlite.dll"
+          touch "$VS_DIR/Mods/VSSurvivalMod.dll"
+          touch "$VS_DIR/Mods/VSEssentials.dll"
+          touch "$VS_DIR/Mods/VSCreativeMod.dll"
+
+          echo "VINTAGE_STORY=$VS_DIR" >> "$GITHUB_ENV"
+
+      - name: Restore solution
+        run: dotnet restore Snowshoes.sln
+
+      - name: Build Cake build host
+        run: dotnet build ZZCakeBuild/CakeBuild.csproj --configuration Release --no-restore
+
+      - name: Build mod
+        run: dotnet build Snowshoes/Snowshoes.csproj --configuration Release --no-restore
